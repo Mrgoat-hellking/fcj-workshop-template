@@ -1,59 +1,92 @@
 ---
 title: "Worklog Tuần 4"
-date: 2025-01-01
+date: 2025-09-29
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
+* tiếp tục tìm hiểu và học hỏi các dịch vụ của AWS 
+* công tác tìm hiểu và tiến hành làm Project web bán hàng .
+* Tham dự event AI-DLC(AI-Drien Development Lifecycle)
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Edge Computing with CloudFront and Lambda@**Edge** <br> - Windows Workloads on AWS                                    | 29/09/2025   | 29/09/2025      |
+| 3   | - Directory Services with AWS Managed Microsoft AD <br> - Building Highly Available Web Applications <br> - làm dự án 
+                             | 30/09/2025   | 30/09/2025      |  |
+| 4   | - VM Migration with AWS VM Import/Export <br> - làm dự án 
+ | 1/10/2025   | 1/10/2025      |  |
+| 5   | - Database Migration with AWS Database Migration Service (DMS) and Schema Conversion Tool (SCT) <br> - làm dự án 
+                 | 2/10/2025   | 2/10/2025      |  |
+| 6   | - tham dự event <br> - tổng kết tuần thứ 2 làm dự án Web bán hàng                                         | 3/10/2025   | 3/10/2025      |  |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* 1. Hiểu được các dịch vụ hỗ trợ triển khai và di chuyển hệ thống trên AWS
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm vững quy trình Import/Export máy ảo (VM) giữa môi trường on-premise và AWS.
+* Hiểu rõ cách sử dụng AWS Directory Service để triển khai và quản lý Active Directory trên AWS.
+* Biết cách triển khai WordPress trên kiến trúc AWS Cloud, gồm EC2, RDS, Auto Scaling, Load Balancer và CloudFront.
+* Nắm được quy trình chuyển đổi và di chuyển cơ sở dữ liệu (schema + data) bằng AWS DMS & SCT.
+*  Làm quen với Amazon WorkSpaces – dịch vụ Desktop ảo cho môi trường doanh nghiệp.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* 2. Có thể làm được
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Triển khai và mở rộng ứng dụng web từ một máy chủ sang kiến trúc nhiều tầng có khả năng auto scaling và load balancing.
+* Kết hợp các dịch vụ AWS để tạo hệ thống hoàn chỉnh (EC2 + RDS + S3 + CloudFront).
+* Thực hiện migration cơ sở dữ liệu giữa các môi trường khác nhau.
+* Tạo và quản lý môi trường làm việc ảo hóa (WorkSpaces) cho người dùng nội bộ.
+  
+* 3. Thực hành và thao tác chính
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* a. VM Import/Export:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+  * Import máy ảo từ môi trường cục bộ lên AWS (qua S3 → AMI → EC2).
+  * Export ngược lại VM từ AWS ra on-premise.
+  * Quản lý quyền truy cập và ACL của S3 bucket.
+  * Dọn dẹp tài nguyên sau khi thực hành.
+  
+* b. AWS Directory Service:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  * Tạo Managed Microsoft AD.
+  * Kết nối EC2 Windows vào domain.
+  * Quản lý user, group, và policy qua AD.
+  * Cấu hình DNS và mạng nội bộ.
+
+* c. Triển khai WordPress trên AWS Cloud:
+
+  * Tạo VPC và subnet (public/private).
+  * Cấu hình Security Group, Load Balancer, Auto Scaling Group.
+  * Deploy WordPress trên EC2, kết nối với RDS.
+  * Kết hợp CloudFront làm CDN để tăng tốc truy cập.
+  * Backup và khôi phục dữ liệu.
+
+* d. Database Migration (DMS & SCT):
+
+  * Chuyển đổi schema bằng AWS Schema Conversion Tool.
+  * Di chuyển dữ liệu bằng Database Migration Service.
+  * Cấu hình replication instance, endpoint, task.
+  * Theo dõi tiến trình qua CloudWatch Metrics.
+
+* e. Amazon WorkSpaces:
+
+  * Tạo và cấu hình môi trường desktop ảo.
+  * Quản lý người dùng, cấp quyền truy cập.
+  * Kết nối và kiểm thử hiệu suất hoạt động.
+
+* 4. Kỹ năng đạt được
+
+* Thực hành quy trình migration thực tế từ hệ thống on-premise lên AWS Cloud.
+* Thành thạo các thao tác triển khai ứng dụng web có khả năng mở rộng.
+* Hiểu sâu hơn về Load Balancing, Auto Scaling, Directory, Migration, WorkSpaces.
+* Nắm rõ quy trình dọn dẹp tài nguyên và tối ưu chi phí sau khi triển khai.
+* Biết thiết kế, triển khai và quản lý hệ thống đa dịch vụ trên AWS.
 
 
+
+* **cuối cùng tuần này khá là căng cảm ơn đến anh  Thịnh Nguyễn đã giúp đỡ em**

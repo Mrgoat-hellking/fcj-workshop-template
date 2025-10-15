@@ -1,6 +1,6 @@
 ---
 title: "Bản đề xuất"
-date: 2025-09-30
+date: 2025-10-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
@@ -32,8 +32,9 @@ Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS 
 * ROI kỳ vọng trong 6–12 tháng nhờ tăng doanh thu online và tiết kiệm chi phí vận hành.
 
 ### 3. Kiến trúc giải pháp
+Hệ thống web bán hàng được xây dựng trên nền tảng AWS serverless, tận dụng các dịch vụ điện toán đám mây để giảm chi phí vận hành và dễ dàng mở rộng. Giao diện người dùng được triển khai hiện đại, backend xử lý linh hoạt qua API Gateway và Lambda, dữ liệu được quản lý an toàn trên DynamoDB và S3. Các lớp bảo mật, xác thực và chatbot AI được tích hợp để nâng cao trải nghiệm khách hàng và đảm bảo an toàn hệ thống.
 
-
+![E-commerce Website Solution ](/images/2-Proposal/proposal.jpg)
 *Dịch vụ AWS sử dụng*
 
 - AWS Amplify: Triển khai và lưu trữ website frontend (React/Next.js).
@@ -82,8 +83,7 @@ Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS 
 
 ### 6. Ước tính ngân sách
 
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).
+
 
 *Chi phí hạ tầng*
 - Chi phí hạ tầng (ước tính theo tháng)
@@ -94,8 +94,9 @@ Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.p
 - Cognito: ~1 USD
 - AI Chatbot (Lex/Bedrock): ~5 USD
 - SES Email: ~1 USD
+- chi phí dự phòng  phát sinh : 50 USD/ tháng đầu
+Tổng cộng: ~25 USD/tháng (~300 USD/năm).
 
-Tổng cộng: ~19 USD/tháng (~230 USD/năm).
 ### 7. Đánh giá rủi ro
 
 *Ma trận rủi ro*

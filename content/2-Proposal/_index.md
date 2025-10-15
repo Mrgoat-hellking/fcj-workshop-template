@@ -1,6 +1,6 @@
 ---
 title: "Proposal"
-date: 2025-08-09
+date: 2025-10-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
@@ -33,11 +33,10 @@ The platform uses AWS IoT Core to receive MQTT data, AWS Lambda and API Gateway 
 - Expected ROI within 6–12 months through increased online sales and reduced operating costs.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+The e-commerce system is built on an AWS serverless architecture, leveraging cloud services to minimize operational costs and ensure scalability. The user interface is deployed with a modern frontend, while the backend is handled flexibly through API Gateway and Lambda. Data is securely managed with DynamoDB and S3. Security layers, authentication, and an AI chatbot are integrated to enhance customer experience and ensure system safety.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+![E-commerce Website Solution ](/images/2-Proposal/proposal.jpg)
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
 
 ### AWS Services Used
 - **AWS Amplify**: Deploy and host frontend website (React/Next.js).
@@ -94,8 +93,6 @@ The platform employs a serverless AWS architecture to manage data from 5 Raspber
 - Post-Launch: Up to 1 year for research.
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
 ### Infrastructure Costs
 - AWS Services:
@@ -106,6 +103,7 @@ Or you can download the [Budget Estimation File](../attachments/budget_estimatio
    - Cognito: ~1 USD
    - AI Chatbot (Lex/Bedrock): ~5 USD
    - SES Email: ~1 USD
+   - Contingency cost incurred: 50 USD/the first month
 Total: ~19 USD/month (~230 USD/year).
 
 

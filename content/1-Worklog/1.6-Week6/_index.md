@@ -1,57 +1,105 @@
 ---
 title: "Week 6 Worklog"
-date: 2025-01-01
+date: 2025-10-13
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Midterm review is intense
+* Continue studying AWS services
+* Working on the Project: Integrating AI into the website
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - - Network Monitoring with VPC Flow Logs <br> - Billing Console Delegationv                               | 13/10/2025 | 13/10/2025      |
+| 3   | - Managing Quotas with Service Quotas <br>  - Cost and Usage Management        | 14/10/2025 | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Snapshot Automation with Amazon EBS Data Lifecycle Manager <br> - Anomaly Detection for EBS Backups | 15/10/2025 | 15/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Development Environment with AWS Toolkit for VS Code <br> - Identity Federation with AWS Single Sign-On   | 16/10/2025 | 16/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | -                                                                             | 17/10/2025 | 17/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+1. **Understanding AWS Services**
 
-* Successfully created and configured an AWS Free Tier account.
+   * Monitoring & Logging: Track network and system activity through VPC Flow Logs and CloudWatch Logs.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+   * Billing & Cost Management: Manage finances, delegate billing access, and monitor spending.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+   * Quota Management: Control and request resource increases via Service Quotas.
 
-* Used AWS CLI to perform basic operations such as:
+   * Automation & Lifecycle: Automate snapshot creation and lifecycle management with EBS Data Lifecycle Manager.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+   * Development Tools: Develop and deploy applications directly from VS Code using AWS Toolkit.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+   * Identity & Access: Centralized access management through AWS Single Sign-On (IAM Identity Center).
+
+2. **AWS Resource Practice and Operations**
+
+* Network Monitoring:
+
+  * Enabled VPC Flow Logs to monitor network traffic within the VPC.
+
+  * Logged data into CloudWatch Logs, filtered and analyzed it to detect abnormal EC2 connections.
+
+* Cost & Quota Management:
+
+  * Reviewed and requested resource limit increases via Service Quotas.
+
+  * Applied IAM Policies to restrict access by Region, instance type, and volume type for better cost control.
+
+  * Granted Billing access to IAM users, monitored invoices, and reviewed cost reports through the Billing Console.
+
+* Backup Automation:
+
+  * Created EBS Snapshots and configured Data Lifecycle Manager (DLM) to automate backup, archiving, and deletion of old snapshots.
+
+  * Set up multi-level snapshot schedules (daily/weekly) to optimize storage costs.
+
+* Anomaly Detection:
+
+  * Applied Anomaly Detection in CloudWatch or DLM to monitor unusual backup activities, ensuring data integrity.
+
+* Development Environment:
+
+  * Connected AWS to VS Code for deploying, monitoring, and managing resources without using the AWS Console.
+
+  * Debugged and deployed serverless applications directly within the IDE.
+
+* Centralized Identity Federation:
+
+  * Configured AWS IAM Identity Center (SSO) to enable users to access multiple AWS accounts through a single portal.
+
+  * Organized accounts under Organizational Units and assigned permissions to each group or project.
+
+3. **Achievements**
+
+* Mastered how to:
+
+  * Monitor networks, traffic, and system logs using VPC Flow Logs.
+
+  * Manage and optimize AWS operating costs.
+
+  * Control and track resources via Service Quotas.
+
+  * Automate backups using EBS Data Lifecycle Manager.
+
+  * Set up AWS development environments directly in VS Code.
+
+  * Centrally manage users and access through IAM Identity Center.
+
+* Successfully connected and utilized AWS Console, AWS CLI, and AWS Toolkit for VS Code in parallel.
+
+4. **Conclusion**
+
+* Through these lessons, a complete AWS system management workflow was established, covering:
+
+* Monitoring – Cost Management – Quota Control – Automation – Identity – Application Development.
+
+* This integrated approach enables efficient AWS infrastructure operation, minimizes risks, enhances security, and optimizes resource usage.
