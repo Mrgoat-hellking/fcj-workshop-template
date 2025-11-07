@@ -15,7 +15,7 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
   themeVariant = "workshop"
   description = ""
-  author = "ducnqse182087@fpt.edu.vn"
+  author = "ducdmse182938@fpt.edu.vn"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
