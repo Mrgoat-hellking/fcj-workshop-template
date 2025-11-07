@@ -13,14 +13,14 @@ pre: " <b> 1.6. </b> "
 * ôn tập midterm căng 
 * vẫn tiếp tục học các dịch vụ của AWS
 * Làm dự án Project : liên kết AI vào trang web
-
+* tham giá sự kiện : WORKSHOP “DATA SCIENCE ON AWS” – MỞ KHÓA SỨC MẠNH DỮ LIỆU CÙNG ĐIỆN TOÁN ĐÁM MÂY
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
 | 2   |  - Network Monitoring with VPC Flow Logs <br> - Billing Console Delegation | 13/10/2025   | 13/10/2025      |
 | 3   | - Managing Quotas with Service Quotas <br> - Cost and Usage Management | 14/10/2025   | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 4   | - Snapshot Automation with Amazon EBS Data Lifecycle Manager <br> - Anomaly Detection for EBS Backups| 15/10/2025   | 15/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Development Environment with AWS Toolkit for VS Code <br> - Identity Federation with AWS Single Sign-On | 16/10/2025   | 16/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Development Environment with AWS Toolkit for VS Code <br> - Identity Federation with AWS Single Sign-On <br> -  WORKSHOP “DATA SCIENCE ON AWS” – MỞ KHÓA SỨC MẠNH DỮ LIỆU CÙNG ĐIỆN TOÁN ĐÁM MÂY | 16/10/2025   | 16/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 6   | -                                           | 17/10/2025   | 17/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 

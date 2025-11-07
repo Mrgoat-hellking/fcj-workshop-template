@@ -87,15 +87,15 @@ Hệ thống web bán hàng được xây dựng trên nền tảng AWS serverle
 
 *Chi phí hạ tầng*
 - Chi phí hạ tầng (ước tính theo tháng)
-- AWS Amplify: ~5 USD
-- API Gateway + Lambda: ~2 USD
-- DynamoDB: ~3 USD
-- S3 + CloudFront: ~2 USD
+- AWS Amplify: ~9 USD
+- API Gateway + Lambda: ~5 USD
+- DynamoDB: ~10 USD
+- S3 + CloudFront: ~4 USD
 - Cognito: ~1 USD
-- AI Chatbot (Lex/Bedrock): ~5 USD
+- AI Chatbot (Lex/Bedrock): ~10 USD
 - SES Email: ~1 USD
-- chi phí dự phòng  phát sinh : 50 USD/ tháng đầu
-Tổng cộng: ~25 USD/tháng (~300 USD/năm).
+- chi phí dự phòng  phát sinh : 70 USD/ tháng đầu
+Tổng cộng: ~45 USD/tháng (~300 USD/năm).
 
 ### 7. Đánh giá rủi ro
 

@@ -1,13 +1,12 @@
 ---
 title: "Worklog Tuần 11"
-date: 2025-01-01
+date: 2025-11-17
 weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích dgadgadga{{% /notice %}}
 
 
 ### Mục tiêu tuần 11:

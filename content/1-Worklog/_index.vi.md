@@ -1,12 +1,12 @@
 ---
 title: "Nhật ký công việc"
-date: 2025-08-09
+date: 2025-11-24
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-
+gavs
 
 **Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
 

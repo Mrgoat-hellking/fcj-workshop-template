@@ -1,16 +1,13 @@
 ---
 title: "Event 2"
-date: 2025-01-01
+date: 2025-10-16
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+#  WORKSHOP “DATA SCIENCE ON AWS” – MỞ KHÓA SỨC MẠNH DỮ LIỆU CÙNG ĐIỆN TOÁN ĐÁM MÂY
 
 ### Mục Đích Của Sự Kiện
 

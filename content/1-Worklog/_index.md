@@ -1,12 +1,12 @@
 ---
 title: "Worklog"
-date: 2025-08-09
+date: 2025-11-24
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-
+adgagag
 **On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
 
 Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
