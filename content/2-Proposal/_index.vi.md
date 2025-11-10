@@ -35,7 +35,7 @@ Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS 
 Hệ thống web bán hàng được xây dựng trên nền tảng AWS serverless, tận dụng các dịch vụ điện toán đám mây để giảm chi phí vận hành và dễ dàng mở rộng. Giao diện người dùng được triển khai hiện đại, backend xử lý linh hoạt qua API Gateway và Lambda, dữ liệu được quản lý an toàn trên DynamoDB và S3. Các lớp bảo mật, xác thực và chatbot AI được tích hợp để nâng cao trải nghiệm khách hàng và đảm bảo an toàn hệ thống.
 
 ![E-commerce Website Solution ](/images/2-Proposal/proposal.jpg)
-*Dịch vụ AWS sử dụng*
+*Dịch vụ AWS sử dụng
 
 - AWS Amplify: Triển khai và lưu trữ website frontend (React/Next.js).
 - Amazon API Gateway + AWS Lambda: Xử lý backend cho các API giỏ hàng, đơn hàng, sản phẩm.

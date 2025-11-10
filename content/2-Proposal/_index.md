@@ -94,17 +94,17 @@ The e-commerce system is built on an AWS serverless architecture, leveraging clo
 
 ### 6. Budget Estimation
 
-### Infrastructure Costs
+### Infrastructure Cost
 - AWS Services:
-   - AWS Amplify: ~5 USD
-   - API Gateway + Lambda: ~2 USD
-   - DynamoDB: ~3 USD
-   -  S3 + CloudFront: ~2 USD
+   - AWS Amplify: ~9 USD
+   - API Gateway + Lambda: ~5 USD
+   - DynamoDB: ~10 USD
+   -  S3 + CloudFront: ~4 USD
    - Cognito: ~1 USD
-   - AI Chatbot (Lex/Bedrock): ~5 USD
+   - AI Chatbot (Lex/Bedrock): ~10 USD
    - SES Email: ~1 USD
-   - Contingency cost incurred: 50 USD/the first month
-Total: ~19 USD/month (~230 USD/year).
+   - Contingency cost incurred: 70 USD/the first month
+Total: ~45 USD/month (~300 USD/year).
 
 
 ### 7. Risk Assessment
