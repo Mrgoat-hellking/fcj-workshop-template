@@ -307,7 +307,7 @@ Email/Contact information: ducdmse182938@fpt.edu.vn
 |-----------------------------------------------------|:---------:|:----------:|:--------------:|:--------------:|:-------------:|
 |Survey & Solution Design| 53 | 40 | 13 | 13 |119|
 |Implementation & Testing|67 |160 | 21 |19 |267 |
-|Evaluation & Handover| 27 |53 |21 | 19 | 120 |
+|Support / Documentation| 27 |53 |21 | 19 | 120 |
 |Total Hours|147 | 253| 55 |51 | 506|
 |Total Amount |$5145 |$5060 |$825|$510 |$11540 |
 
