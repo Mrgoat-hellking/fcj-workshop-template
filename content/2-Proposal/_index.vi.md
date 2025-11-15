@@ -265,7 +265,6 @@ Dự án hiện đã sẵn sàng mở rộng người dùng thật và tích h�
 - S3 (Uploads):      $0.75
 - AWS Lambda:        $0.25
 - API Gateway:       $3.50
-- Amazon Rekognition:$1.00
 - Amazon Bedrock:    $3.00
 - DynamoDB:          $1.00
 - IAM:               Free
