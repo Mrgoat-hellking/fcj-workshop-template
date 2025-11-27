@@ -62,7 +62,7 @@ Potential risks include IAM misconfigurations, accidental overspending due to un
 
 Despite these risks, the project is built on clear expectations: this is a pilot environment, with layered monitoring, backup, and cost-management strategies in place. Every challenge is considered an opportunity to learn and grow in cloud engineering.
 
-![E-commerce Website Solution ](/images/2-Proposal/proposal.jpg)
+![E-commerce Website Solution ](/images/2-Proposal/OJT.drawio.png)
 
 ### 2. SOLUTION ARCHITECTURE
 #### 2.1 Technical Architecture Diagram
@@ -212,13 +212,14 @@ Estimated monthly cost: $30–35 USD
 - Route 53 :         $1.00
 - AWS WAF :          $5.00
 - CloudFront:        $3.90
+- Amplify: $10.00
 - S3 (StaticData) :  $0.50
 - S3 (Uploads):      $0.75
 - S3 (Bucket):       $0.75
 - AWS Lambda:        $0.25
 - API Gateway:       $3.50
 - Amazon Bedrock:    $3.00
-- DynamoDB:          $1.00
+- RDS:              $1.00
 - IAM:               Free
 - CloudWatch:        $2.00
 - SNS:               $0.10
@@ -232,11 +233,11 @@ Cost assumptions:
 
 Region: Singapore
 
-500–1000 users/month
+100–200 users/month
 
 Low traffic
 
-Data < 100GB
+Data < 30GB
 
 Free Tier active for 12 months
 
