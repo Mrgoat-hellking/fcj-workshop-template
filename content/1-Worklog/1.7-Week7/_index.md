@@ -13,15 +13,14 @@ pre: " <b> 1.7. </b> "
 * Continue studying and becoming familiar with AWS services.
 * No new topics this week—focus on review in preparation for the midterm on October 31.
 * Additional learning through Udemy – CLF-C02 course.
-
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | -  Security Compliance with AWS Security Hub <br> - Private Access to S3 with VPC Endpoints <br> - Application Protection with AWS WAF    | 08/11/2025 | 08/11/2025      |
-| 3   | -  Encryption with AWS Key Management Service (KMS) <br> - Data Protection with Amazon Macie <br> - Credentials Management with AWS Secrets Manager       | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | -  Security Governance with AWS Firewall Manager <br> - Threat Detection with AWS GuardDuty <br> - Systems Patching with EC2 Image Builder | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | -  Cross-Domain Authentication with Amazon Cognito <br>  - S3 Security Best Practices <br> - Data Protection with AWS Backup    | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | -  Network Integration with VPC Peering <br> - Centralized Network Management with AWS Transit Gateway <br> - Messaging Systems with SQS and SNS                            | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | -  Security Compliance with AWS Security Hub <br> - Private Access to S3 with VPC Endpoints <br> - Application Protection with AWS WAF    | 20/10/2025 | 20/10/2025      |
+| 3   | -  Encryption with AWS Key Management Service (KMS) <br> - Data Protection with Amazon Macie <br> - Credentials Management with AWS Secrets Manager       | 21/10/2025 | 21/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | -  Security Governance with AWS Firewall Manager <br> - Threat Detection with AWS GuardDuty <br> - Systems Patching with EC2 Image Builder | 22/10/2025 | 22/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | -  Cross-Domain Authentication with Amazon Cognito <br>  - S3 Security Best Practices <br> - Data Protection with AWS Backup    | 23/10/2025 | 23/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | -  Network Integration with VPC Peering <br> - Centralized Network Management with AWS Transit Gateway <br> - Messaging Systems with SQS and SNS                            | 24/10/2025 | 24/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 7 Achievements:

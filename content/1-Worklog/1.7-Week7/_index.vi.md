@@ -14,13 +14,13 @@ pre: " <b> 1.7. </b> "
 * Học thêm trên Udemy - clf-C02
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc                                                                                                                                                                                  | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Security Compliance with AWS Security Hub  <br> - Private Access to S3 with VPC Endpoints <br> -  Application Protection with AWS WAF | 11/08/2025   | 11/08/2025      |
-| 3   | - Encryption with AWS Key Management Service (KMS) <br> - Data Protection with Amazon Macie <br> -  Credentials Management with AWS Secrets Manager | 12/08/2025   | 12/08/2025      |  |
-| 4   | - Security Governance with AWS Firewall Manager <br> - Threat Detection with AWS GuardDuty <br> - Systems Patching with EC2 Image Builder  | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Cross-Domain Authentication with Amazon Cognito <br> - S3 Security Best Practices <br> - Data Protection with AWS Backup  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Network Integration with VPC Peering <br> - Centralized Network Management with AWS Transit Gateway <br> - Messaging Systems with SQS and SNS  | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Security Compliance with AWS Security Hub  <br> - Private Access to S3 with VPC Endpoints <br> -  Application Protection with AWS WAF | 20/10/2025   | 20/10/2025      |
+| 3   | - Encryption with AWS Key Management Service (KMS) <br> - Data Protection with Amazon Macie <br> -  Credentials Management with AWS Secrets Manager | 21/10/2025   | 21/10/2025      |  |
+| 4   | - Security Governance with AWS Firewall Manager <br> - Threat Detection with AWS GuardDuty <br> - Systems Patching with EC2 Image Builder  | 22/10/2025   | 22/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Cross-Domain Authentication with Amazon Cognito <br> - S3 Security Best Practices <br> - Data Protection with AWS Backup  | 23/10/2025   | 23/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Network Integration with VPC Peering <br> - Centralized Network Management with AWS Transit Gateway <br> - Messaging Systems with SQS and SNS  | 24/10/2025   | 24/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:

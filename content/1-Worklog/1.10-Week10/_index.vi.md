@@ -5,55 +5,33 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning%}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warnidgvadsng này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu sâu hơn về các dịch vụ aws 
+* Tiếp tục làm project 
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Elastic Beanstalk Workshop <br>&emsp; - Deploying Node.js Applications  <br>&emsp;  -  CI/CD with Elastic Beanstalk and CDK Pipelines                                       | 10/11/2025   | 10/11/2025      |
+| 3   | - WordPress on AWS <br>&emsp; -  WordPress Architecture on AWS <br>&emsp; - Running WordPress on Amazon EC2  | 11/11/2025   | 11/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Amazon ECS Workshop <br>&emsp; -  Containerization with Amazon ECS and AWS Fargate <br>&emsp; - Infrastructure as Code for ECS with CDK  <br>&emsp; - CI/CD Pipeline for ECS Applications| 12/11/2025   | 12/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Machine Learning Essentials <br>&emsp; - Machine Learning with Amazon SageMaker <br>&emsp; - SageMaker Immersion Day  | 13/11/2025   | 13/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Data Lake <br>&emsp;  - Data Lake Fundamentals on <br>&emsp; - Building a Data Lake with Your Own DataAWS                                                      | 14/11/2025   | 14/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
-### Kết quả đạt được tuần 10:
+### Kết quả đạt được tuần 10
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Deploying Node.js Applications với Elastic Beanstalk
+Triển khai ứng dụng Node.js bằng Elastic Beanstalk để tự động hóa quá trình deploy, scaling và quản lý môi trường chạy ứng dụng.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Elastic Beanstalk hỗ trợ Node.js platform, tự thiết lập EC2, load balancer, auto scaling và môi trường runtime.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Triển khai ứng dụng: dùng EB CLI (eb init, eb create, eb deploy) để đóng gói mã nguồn, tạo environment và xuất bản app.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+Quản lý môi trường: theo dõi logs, cấu hình scaling, cập nhật version, rollback khi cần.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Frontend hoặc client có thể gọi API Node.js được deploy trên Elastic Beanstalk thông qua domain ứng dụng.

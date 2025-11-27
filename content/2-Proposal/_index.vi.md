@@ -96,7 +96,7 @@ Observability & Security Layer:
 CloudWatch, SNS, và SES giám sát, gửi cảnh báo và thông báo khi có sự cố; đảm bảo hệ thống vận hành ổn định.
 
 Dưới đây là sơ đồ luồng dữ liệu :
-![E-commerce Website Solution ](/images/2-Proposal/proposal.jpg)
+![E-commerce Website Solution ](/images/2-Proposal/OJT.drawio.png)
 
 #### 2.2 Kế hoạch kỹ thuật
 
@@ -261,12 +261,13 @@ Dự án hiện đã sẵn sàng mở rộng người dùng thật và tích h�
 - Route 53 :         $1.00
 - AWS WAF :          $5.00
 - CloudFront:        $3.90
+- Amplify:           $10.00
 - S3 (StaticData) :  $0.50
 - S3 (Uploads):      $0.75
 - AWS Lambda:        $0.25
 - API Gateway:       $3.50
 - Amazon Bedrock:    $3.00
-- DynamoDB:          $1.00
+- RDS:               $21.50
 - IAM:               Free
 - CloudWatch:        $2.00
 - SNS:               $0.10
@@ -274,15 +275,15 @@ Dự án hiện đã sẵn sàng mở rộng người dùng thật và tích h�
 - CloudFormation:    Free
 - GitLab CI/CD  :    $3.00
 - WS Config / Setup & Test migration tools $5.00 (1 lần)
-- Tổng chi phí ước tính hàng tháng: ~ $30.00 – $35.00 USD
+- Tổng chi phí ước tính hàng tháng: ~ $50.00 – $55.00 USD
 
 GIẢ ĐỊNH CHÍNH
 
 Region: ap-southeast-1 (Singapore).
-Người dùng truy cập: 500–1000/tháng.
+Người dùng truy cập: 100–200/tháng.
 Hệ thống luôn hoạt động 24/7 nhưng tải thấp.
-Phần lớn API qua Lambda, không dùng EC2.
-Dữ liệu nhỏ (<100GB tổng).
+Phần lớn API qua Lambda.
+Dữ liệu nhỏ (<30GB tổng).
 CI/CD thực hiện 1–2 lần deploy mỗi tuần.
 Free-tier còn hiệu lực trong 12 tháng đầu.
 AI sử dụng ở mức demo, không phải inference quy mô lớn.
