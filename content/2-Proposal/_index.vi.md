@@ -96,7 +96,7 @@ Observability & Security Layer:
 CloudWatch, SNS, và SES giám sát, gửi cảnh báo và thông báo khi có sự cố; đảm bảo hệ thống vận hành ổn định.
 
 Dưới đây là sơ đồ luồng dữ liệu :
-![E-commerce Website Solution ](/images/2-Proposal/OJT.drawio.png)
+![E-commerce Website Solution ](/images/2-Proposal/OJT-ss2.drawio.png)
 
 #### 2.2 Kế hoạch kỹ thuật
 
@@ -368,4 +368,4 @@ Email/Thông tin liên hệ : ducdmse182938@fpt.edu.vn
 |-------------------------------------------|:--------:|:--------:|
 |Khách hàng |4616 |40% | 
 |Đối tác (Furious Five) |2308 |20% | 
-| AWS |4616 | 40%| 
+| AWS |4616 | 40%|

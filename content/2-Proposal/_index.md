@@ -62,7 +62,7 @@ Potential risks include IAM misconfigurations, accidental overspending due to un
 
 Despite these risks, the project is built on clear expectations: this is a pilot environment, with layered monitoring, backup, and cost-management strategies in place. Every challenge is considered an opportunity to learn and grow in cloud engineering.
 
-![E-commerce Website Solution ](/images/2-Proposal/OJT.drawio.png)
+![E-commerce Website Solution ](/images/2-Proposal/OJT-ss2.drawio.png)
 
 ### 2. SOLUTION ARCHITECTURE
 #### 2.1 Technical Architecture Diagram
@@ -219,7 +219,7 @@ Estimated monthly cost: $30–35 USD
 - AWS Lambda:        $0.25
 - API Gateway:       $3.50
 - Amazon Bedrock:    $3.00
-- RDS:              $1.00
+- RDS:               $21.00
 - IAM:               Free
 - CloudWatch:        $2.00
 - SNS:               $0.10
@@ -227,7 +227,7 @@ Estimated monthly cost: $30–35 USD
 - CloudFormation:    Free
 - GitLab CI/CD  :    $3.00
 - WS Config / Setup & Test migration tools $5.00 (1 lần)
-- Estimated monthly total cost: ~ $30.00 – $35.00 USD
+- Estimated monthly total cost: ~ $50.00 – $55.00 USD
 
 Cost assumptions:
 
