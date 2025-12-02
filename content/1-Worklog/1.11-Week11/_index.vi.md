@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 11"
 date: 2025-11-17
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
@@ -9,48 +9,84 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* tiến vào giai đoạn nước rút của Project
+* ôn lại các dịch vụ sẽ dùng
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Hybrid DNS Management with Amazon Route53                                           | 11/08/2025   | 11/08/2025      |
+| 3   | - Building Serverless CRUD with Lambda and DynamoDB                      | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Serverless Storage and Auth with AWS Amplify | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Frontend Integration with API Gateway       | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Network Integration with VPC Peering                                  | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### Đã học qua và hiểu những bài trên và đây là những khó khi áp dụng vào project.
+* 1. **Lambda + DynamoDB (Serverless CRUD)**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Thiết kế API Gateway đồng bộ với request/response của FFF.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Tách rõ handler, business logic, error handling trong Lambda để tránh rối luồng xử lý.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+Chuyển từ RDS sang DynamoDB làm thay đổi mô hình dữ liệu (PK/SK, GSI).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+Dữ liệu FFF có nhiều quan hệ → khó tối ưu DynamoDB nếu không thiết kế One-Table.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+Logging + CloudWatch phân tán → debug phức tạp.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+Cấu hình IAM role tối thiểu quyền cho Lambda truy cập DynamoDB.
 
+CORS, mapping template, stage variables của API Gateway dễ gây lỗi.
 
+CI/CD từ GitLab → Lambda cần pipeline tự động (zip code, deploy).
+
+Tối ưu cold start, timeout khi traffic tăng cao.
+
+Logic CRUD mẫu quá đơn giản → FFF cần workflow nhiều bước.
+
+2. **Amplify Storage & Auth**
+
+Amplify dùng Cognito + S3, cần đồng bộ với backend FFF (roles, session).
+
+Mapping quyền Cognito (User Pool / Identity Pool) với RBAC FFF phức tạp.
+
+Đồng bộ đăng nhập Amplify với API Gateway IAM auth hoặc JWT validator cần cấu hình thủ công.
+
+Upload file qua Amplify Storage → policy S3, quyền read/write theo user type.
+
+Tải file lớn (ảnh/video) cần presigned URL + giới hạn bảo mật.
+
+Amplify CLI tạo nhiều resource auto → dễ gây rối CloudFormation stack.
+
+CI/CD với Amplify Hosting/Backend nếu kết hợp GitLab phức tạp.
+
+3. **Frontend Integration với API Gateway**
+
+Phải thiết kế rõ endpoint URL, stage, mapping để frontend kết nối Lambda/DynamoDB đúng cách.
+
+Cấu hình CORS, headers, content-type để frontend fetch không bị lỗi.
+
+Xử lý authentication/authorization trên frontend: Cognito JWT, token refresh.
+
+Thống nhất error handling: API trả lỗi, frontend hiển thị đúng thông báo.
+
+Quản lý versioning, stage environment: dev/staging/prod → tránh frontend gọi nhầm endpoint.
+
+Tối ưu performance: nhiều request đồng thời → tránh API Gateway throttling.
+
+4. **Network Integration với VPC Peering**
+
+Thiết lập VPC Peering giữa các VPC của FFF và các service Lambda/DynamoDB cần truy cập.
+
+Cấu hình route table, security group, NACL để traffic Lambda/API Gateway đi đúng VPC.
+
+Kiểm soát DNS resolution giữa các VPC → tránh conflict với private hosted zones.
+
+Xử lý latency và throughput khi peering nhiều VPC → ảnh hưởng performance.
+
+Kiểm soát bảo mật: chỉ cho phép IP/port cần thiết, tránh lộ dữ liệu nội bộ.
+
+Khi mở rộng multi-account → peering phức tạp, khó scale nếu có nhiều VPC.

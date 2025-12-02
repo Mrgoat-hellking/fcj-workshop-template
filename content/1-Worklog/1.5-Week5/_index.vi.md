@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 5"
 date: 2025-10-06
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
@@ -20,7 +20,6 @@ pre: " <b> 1.5. </b> "
 | 4   | - Access Control with IAM and Resource Tags <br> - Systems Management with AWS Systems Manager    | 08/10/2025   | 08/10/2025      | |
 | 5   | - Remote Server Access with Systems Manager Session Manag <br> - Infrastructure as Code with AWS CloudFormation <br> - Cloud Development Kit (AWS CDK) Essentials | 09/10/2025   | 09/10/2025      |  |
 | 6   | -  AWS CDK Advanced <br> - Infrastructure as Code Workshop Series <br> -Right-Sizing with EC2 Resource Optimization                                                 | 10/10/2025   | 10/10/2025      | |
-
 
 ### Kết quả đạt được tuần 5:
 

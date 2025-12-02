@@ -1,58 +1,80 @@
 ---
 title: "Worklog Tuần 12"
 date: 2025-01-01
-weight: 2
+weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* tiến vào giai đoạn nước rút của Project
+* ôn lại các dịch vụ sẽ dùng
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Database Essentials with Amazon Relational Database Service (RDS)                    | 11/08/2025   | 11/08/2025      |
+| 3   | - Access Management with AWS Identity and Access Management (IAM)                         | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Serverless Automation with AWS Lambda| 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - AWS CDK Advanced      | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Application Protection with AWS WAF                             | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Serverless, Amplify & Network Integration Challenges**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+API Gateway đồng bộ request/response, handler & business logic tách riêng, error handling rõ ràng
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Chuyển từ RDS sang DynamoDB: PK/SK, GSI, dữ liệu nhiều quan hệ khó tối ưu One-Table
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+Logging phân tán CloudWatch → debug khó
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+IAM role tối thiểu cho Lambda, CORS/mapping template dễ lỗi
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+CI/CD GitLab → deploy Lambda tự động, tối ưu cold start & timeout
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+CRUD đơn giản → workflow FFF phức tạp
 
+* **Serverless Automation Challenges (AWS Lambda)**
 
+Tách rõ handler, business logic, error handling để tránh rối luồng xử lý
+
+Cold start, timeout khi traffic cao
+
+Logging phân tán qua CloudWatch → khó debug
+
+IAM role tối thiểu cho Lambda, đảm bảo security
+
+CI/CD GitLab → deploy Lambda tự động, zip code, versioning
+
+Workflow phức tạp → CRUD mẫu không đủ
+
+Kết nối với DynamoDB, S3, API Gateway cần mapping chính xác
+
+Quản lý concurrency, throttling khi nhiều request đồng thời
+
+* **AWS CDK Advanced Challenges**
+
+Thiết kế hạ tầng IaC phức tạp, quản lý stack nhiều service (Lambda, RDS, DynamoDB, S3, API Gateway)
+
+Dependency giữa stack → deploy đúng thứ tự, tránh lỗi cyclic dependency
+
+Parameter, environment variable, context management phức tạp
+
+Versioning, update stack → tránh downtime hoặc mất dữ liệu
+
+Security: IAM role/policy phải đồng bộ với CDK
+* **Application Protection Challenges (AWS WAF)**
+
+Thiết kế rules chống SQL injection, XSS, bot traffic phù hợp FFF
+
+Tuning rate-based rules để tránh false positive/block nhầm user hợp lệ
+
+Kết hợp WAF với API Gateway, CloudFront, ALB → cấu hình phức tạp
+
+Logging + monitoring qua CloudWatch → debug request bị block khó
+
+Update rules khi FFF thay đổi API/endpoint

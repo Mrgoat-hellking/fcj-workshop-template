@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 2"
 date: 2025-09-19
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
@@ -52,7 +52,5 @@ pre: " <b> 1.2. </b> "
    * hiểu được các bảo mật của AWS 
    * triển khai và quản lý tốt container mà ko cần vận hành laod balancer.
    * và để ý kĩ tải khoản để không bị khóa tài khoản.
-
-
 
 

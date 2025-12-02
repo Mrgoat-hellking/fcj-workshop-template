@@ -97,7 +97,7 @@ CloudWatch, SNS giám sát, gửi cảnh báo và thông báo khi có sự cố;
 
 Dưới đây là sơ đồ luồng dữ liệu :
 
-![E-commerce Website Solution](/images/2-Proposal/OJT- ss3.drawio.png)
+<img src="/images/2-Proposal/OJT- ss3.drawio.png"/>
 
 #### 2.2 Kế hoạch kỹ thuật
 
@@ -321,7 +321,7 @@ Email/Thông tin liên hệ : ducdmse182938@fpt.edu.vn
 #### Nguồn Lực
 
 | Vai trò | trách nhiệm| Mức phí (USD)/Giờ|
-| ------------------ | ------------------------------------- | ------------------ |
+| ------------------ | ------------------------------------- | :------------------:|
 |Solution Architect(1)|Thiết kế giải pháp tổng thể, bảo đảm tính khả thi kỹ thuật, lựa chọn dịch vụ AWS phù hợp | 35|
 |Cloud Engineer(2)|Triển khai hạ tầng AWS, cấu hình dịch vụ ( S3, IAM...), kiểm thử và tối ưu hệ thống| 20 |
 |Project Manager (1)|Theo dõi tiến độ, điều phối nhóm, quản lý phạm vi và rủi ro dự án. |15 |

@@ -5,122 +5,152 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+# Optimizing Network Footprint in Serverless Applications
+*by Chris McPeek on 21 MAR 2025 in Amazon API Gateway, Amazon Elastic Kubernetes Service, Amazon EventBridge, Amazon Simple Queue Service (SQS), Amazon Simple Storage Service (S3), AWS Lambda, Serverless*
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+*Authored by Anton Aleksandrov, Principal Solutions Architect, AWS Serverless and Daniel Abib, Senior Specialist Solutions Architect, AWS.*
 
----
 
-## Architecture Guidance
+Serverless application developers frequently encounter scenarios where they must transport large payloads, particularly in modern cloud applications that require rich data. Examples include analytics platforms generating detailed reports, e-commerce systems managing large product catalogs, healthcare applications transmitting patient records, or financial services aggregating extensive transactional data.
+However, many serverless services have strict payload size limits — for example:
+AWS Lambda: 6 MB per request/response
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+Amazon SQS and Amazon EventBridge: 256 KB per message
 
-**The solution architecture is now as follows:**
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+This post explains how to use data compression techniques to reduce network footprint and transport larger payloads within existing constraints.
+
 
 ---
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+## Overview
+As cloud applications evolve to meet new features and Service Level Objectives (SLOs), payload sizes often grow. Eventually, you may hit service-imposed limits such as:
+Lambda synchronous invoke: 6 MB
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+
+API Gateway: 10 MB
+
+
+SQS/EventBridge: 256 KB
+
+
+If payloads reach tens of MBs or include large binary objects, you can store data on Amazon S3 and use pre-signed URLs for direct upload/download.
+
+Figure 1 – Sample architecture for handling large payloads.
+When handling large messages via SQS or EventBridge, you can store message content in S3 and send only a reference. The consumer then retrieves the full message directly from S3.
+However, while these techniques work, they introduce architectural complexity and require modifying existing workflows.
+Additionally, as payload sizes increase, data transfer costs rise—especially through NAT Gateways, VPC Endpoints, or cross-Region transfers. For example, Lambda functions inside a VPC may invoke public endpoints or external services.
+
+Figure 2 – Examples of using virtual network appliances with serverless applications.
+Both NAT Gateway and VPC Endpoint are billed per GB of data processed, making data compression a valuable optimization technique.
+
+---
+**What Is Data Compression?
+Data compression reduces data size to improve performance and cost-efficiency for storage and transmission. Tools such as gzip and zstd are widely used, standardized under IANA and IETF RFC 9110.
+Modern browsers (Chrome, Firefox), HTTP tools (curl, Postman), and runtimes (Node.js, Python) support compression natively.
+When clients send compressed data, they specify it using the Content-Type header. To receive compressed responses, clients specify supported compression methods in the Accept-Encoding request header.
+
+Figure 3 – Accept-Encoding request header specifying supported compression methods.
+The server then compresses responses using a supported method and includes a Content-Encoding header to indicate the compression type.
+
+Figure 4 – Content-Encoding response header specifying compression method.
+This reduces bytes transmitted over the network, improving latency. Text-based formats like JSON, XML, HTML, and YAML compress well, whereas binary files (PDF, JPEG) compress less effectively.
+
 
 ---
 
-## Technology Choices and Communication Scope
+## Data Compression with API Gateway
+Amazon API Gateway offers built-in compression via the minimumCompressionSize configuration, which automatically compresses responses above a certain size (0 bytes–10 MB).
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Figure 5 – Handling data compression in API Gateway.
+How It Works
+API Gateway automatically decompresses incoming requests and compresses outgoing responses.
 
----
 
-## The Pub/Sub Hub
+Compression is bi-directional and works seamlessly with JSON payloads.
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+Clients specify compression in the Content-Encoding header; API Gateway decompresses before forwarding to integrations.
 
----
 
-## Core Microservice
+API Gateway compresses integration responses when clients include a matching Accept-Encoding header.
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+Test results:
+Compression disabled: Response size = 1 MB, latency = 660 ms
+
+
+Compression enabled: Response size = 220 KB, latency = 550 ms
+
+
+→ 78% network footprint reduction and 110 ms faster response.
+To preserve compression end-to-end (so Lambda can handle decompression), configure binaryMediaTypes to allow binary passthrough.
 
 ---
 
-## Front Door Microservice
+## Handling Compressed Data in AWS Lambda
+AWS Lambda Invoke API supports text-based payloads (e.g., JSON) up to 6 MB (sync) or 256 KB (async).
+ You can, however, compress payloads within Lambda code to overcome limits and reduce transfer costs.
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+Figure 7 – Transporting compressed payloads in serverless applications.
+The code below shows how to compress response payloads in Node.js using the built-in zlib module:
+
+Figure 8 – Sample code implementing response payload compression in a Lambda function.
+Key details:
+Line 1 imports gzip from the zlib module.
+
+
+Lines 11 compress and Base64-encode data (since Lambda expects text-based output).
+
+
+Lines 13–21 create the response object with isBase64Encoded=true and proper headers.
+
+
+Result:
+ A 20 MB uncompressed JSON returns as a 2.5 MB compressed payload — 80% network footprint reduction.
+
+Figure 9 – Screenshot from Postman showing original vs. compressed payload size.
+This method allows transferring payloads several times larger than Lambda’s default limits
 
 ---
 
-## Staging ER7 Microservice
+## Using Function URLs with Compressed Payloads
+Transporting compressed payloads via Lambda Function URLs requires no extra configuration.
+ The handler simply compresses and Base64-encodes the response.
+ Incoming requests marked as binary are automatically passed to your function as Base64 strings.
 
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+Figure 10 – Sample code implementing request payload decompression in a Lambda function.
+
+Trade-Offs and Testing Results
+Compression is CPU-intensive, increasing invocation duration and potentially cost. However, it reduces data transfer and latency—often yielding net savings.
+Tests using Node.js on ARM architecture with random JSON payloads showed:
+Compressing a 1 MB JSON object added ~124 ms compute time for 1 GB memory.
+
+
+10 million invocations → +$16 compute cost.
+
+
+But 70% payload size reduction saved ~$300 (NAT Gateway) or ~$70 (VPC Endpoint).
+
+
+Savings depend on payload type and compression ratio. For low-compressibility data, results may vary.
 
 ---
+## Sample Application
+You can test this in your own AWS account using the sample project in the provided GitHub repository.
+ The sample provisions two Lambda functions to demonstrate gzip compression for GET and POST operations via Function URLs and API Gateway.
+Results show >80% reduction in network footprint using JSON payloads.
 
-## New Features in the Solution
+Figure 11 – Screenshot from Postman showing the original and compressed payload size.
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+---
+## Conclusion
+Data compression allows larger payload transfers and significantly reduces network footprint. It improves latency and helps control transfer costs, especially for data flowing through NAT Gateways or VPC Endpoints.
+However, compression adds CPU overhead — you should balance the compute cost against the network savings.
+Compression is most effective for large text-based payloads, where small increases in compute time are offset by faster, cheaper data transfer.
+By applying these techniques in AWS Lambda and API Gateway, you can make your serverless applications more efficient, scalable, and cost-optimized.
+
+

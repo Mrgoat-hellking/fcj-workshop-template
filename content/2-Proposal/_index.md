@@ -87,7 +87,7 @@ Amazon Rekognition and Amazon Bedrock power image processing and generative AI f
 Observability & Security Layer
 CloudWatch, SNS, and SES provide monitoring, alerting, and system notifications.
 
-![E-commerce Website Solution ](/images/2-Proposal/OJT- ss3.drawio.png)
+<img src="/images/2-Proposal/OJT- ss3.drawio.png"/>
 
 #### 2.2 Technical Implementation Plan
 
@@ -328,26 +328,26 @@ Email/Contact information: ducdmse182938@fpt.edu.vn
 ### 6. RESOURCES & COST ESTIMATES
 #### Resources
 
-| Roles | Responsibilities| Rate (USD)/Hour|
+| Role | Responsibilities| Fee (USD)/Hour|
 | ------------------ | ------------------------------------- | :------------------: |
-|Solution Architect(1)|Design overall solutions, ensure technical feasibility, select appropriate AWS services | 35|
-|Cloud Engineer(2)|Implement AWS infrastructure, configure services (S3, IAM...), test and optimize systems| 20 |
-|Project Manager (1)|Monitor progress, coordinate teams, manage project scope and risks. |15 |
-|Support / Documentation (1) |Prepare handover documents, user manuals, and final reports. | 10|
+|Solution Architect(1)|Design overall solution, ensure technical feasibility, select appropriate AWS service | 35|
+|Cloud Engineer(2)|Deploy AWS infrastructure, configure services (S3, IAM...), test and optimize system| 20 |
+|Project Manager (1)|Monitor progress, coordinate team, manage scope and risk for the project. |15 |
+|Support / Documentation (1) |Prepare communication documents, user manuals and summary reports. | 10|
 
 #### Estimate costs by project phase
 
-| Project phase | Solution Architect (hrs) | 2 Engineers (hrs) | Project Manager (hrs) | Project Management / Support (hrs)| Total Hours|
-|-----------------------------------------------------|:---------:|:----------:|:--------------:|:--------------:|:-------------:|
+| Project Phase | Solution Architect (hrs) | 2 Engineers (hrs)|Project Manager (hrs)|Project Management/Suppor(hrs)| Total Hours|
+|-----------------------------------------------------|:---------:|:----------:|:-------------:|:--------------:|:-------:|
 |Survey & Solution Design| 53 | 40 | 13 | 13 |119|
-|Implementation & Testing|67 |160 | 21 |19 |267 |
-|Support / Documentation| 27 |53 |21 | 19 | 120 |
+|Implementation & Testing|67 |160 | 21|19 |267 |
+|Handover & Support | 27 |53 |21 | 19 | 120 |
 |Total Hours|147 | 253| 55 |51 | 506|
 |Total Amount |$5145 |$5060 |$825|$510 |$11540 |
 
 #### Cost Contribution Allocation
 | Party | Contribution (USD) | % Contribution |
-|----------------------------------------|:--------:|:--------:|
-|Customers |4616 |40% |
-|Partners (Furious Five) |2308 |20% |
+|-------------------------------------------|:--------:|:--------:|
+|Customer |4616 |40% |
+|Partner (Furious Five) |2308 |20% |
 | AWS |4616 | 40%|
