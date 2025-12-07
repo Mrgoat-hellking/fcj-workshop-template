@@ -6,36 +6,38 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
+During my internship, I participated in 4 events, each event was a memorable experience with new, interesting and useful knowledge, along with gifts and wonderful moments. ### [Event 1](4.1-Event1/)
+&emsp;**Event Name:** DX Talk#7: Reinventing DevSecOps with AWS Generative AI
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+&emsp;**Time:** 09:00 October 16, 2025
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+&emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** Cloud Day Vietnam 2025 : AI Edition  
+&emsp;**Role in the event:** Attendees
 
-&emsp;**Date & Time:** 09:00, september 18, 2025  
+### [Event 2](4.2-Event2/)
+&emsp;**Event Name:** AWS Cloud Mastery Series #1 — AI/ML/GenAI on AWS
 
-&emsp;**Location:** 36th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Time:** 09:00 November 15, 2025
 
-&emsp;**Role:** Attendee  
+&emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
----
+&emsp;**Role in the event:** Attendees
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+### [Event 3](4.3-Event3/)
+&emsp;**Event name:** AWS Cloud Mastery Series #2 — DevOps on AWS
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+&emsp;**Time:** 09:00 November 17, 2025
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Location:** 26th Floor, Bitexco Building, No. 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
-&emsp;**Role:** Attendee  
+&emsp;**Role in the event:** Attendees
+
+### [Event 4](4.4-Event4/)
+&emsp;**Event name:** AWS Cloud Mastery Series #3 — According to AWS Well-Architected Security Pillar
+
+&emsp;**Time:** 09:00 November 29/11/2025
+
+&emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+&emsp;**Role in the event:** Attendees

@@ -87,7 +87,7 @@ Amazon Rekognition and Amazon Bedrock power image processing and generative AI f
 Observability & Security Layer
 CloudWatch, SNS, and SES provide monitoring, alerting, and system notifications.
 
-<img src="/images/2-Proposal/OJT- ss3.drawio.png"/>
+<img src="/images/2-Proposal/OJT-SS4.png"/>
 
 #### 2.2 Technical Implementation Plan
 
@@ -279,20 +279,20 @@ If deploying long-term → consider Savings Plan for Lambda (30–40% reduction)
 
 ### 5. Team
 
-**Partner Executive Sponsor** <br>
+#### **Partner Executive Sponsor** <br>
 
 Name: Nguyen Gia Hung <br>
 Title: FCJ Vietnam Training Program Director <br>
 Description: Responsible for overall oversight of the FCJ internship program<br>
 Email/contact information: hunggia@amazon.com|
 
-**Project Stakeholders** <br>
+#### **Project Stakeholders** <br>
 Name: Van Hoang Kha <br>
 Title: Support Teams <br>
 Description: Responsible for overall supervision of the FCJ internship program as the Executive Support person.<br>
 Email/Contact information: Khab9thd@gmail.com
 
-**Partner Project Team** (Furious Five Internship Team)<br>
+#### **Partner Project Team** (Furious Five Internship Team)<br>
 Name: Duong Minh Duc <br>
 Title: Project Team Leader<br>
 Description: Manage progress, coordinate work between the team and mentor, Manage AWS infrastructure deployment (S3, Lambda, IAM)<br>
@@ -318,7 +318,7 @@ Title: Member<br>
 Description: Testing, quality assurance and GitLab CI/CD integration, and AI chat bot integration<br>
 Email/Contact information: hoangplhse182670@fpt.edu.vn
 
-**Project Escalation Contacts**
+#### **Project Escalation Contacts**
 
 Name: Duong Minh Duc<br>
 Title: Project Team Leader<br>

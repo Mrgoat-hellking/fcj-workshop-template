@@ -1,6 +1,6 @@
 ---
 title: "Chia sẻ, đóng góp ý kiến"
-date: 2025-12-09
+date: 2025-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
@@ -31,15 +31,15 @@ Công ty không có chính sách  hỗ trợ phụ cấp thực tập , Có tạ
 
 ### Một số câu hỏi khác
 - Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Được các mentor hưỡng dẫn và chỉ ra các điểm cần làm và cải thiện .
+   * Được các mentor hưỡng dẫn và chỉ ra các điểm cần làm và cải thiện .
 - Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau? 
-- không có gì hết.
+   * không có gì hết.
 - Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
-- Có , vì ở đây có chương trình FCJ rất tốt và có lợi cho tương lai .
+   * Có , vì ở đây có chương trình FCJ rất tốt và có lợi cho tương lai .
 
 ### Đề xuất & mong muốn
 - Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập? 
-- Mong muốn AWS cho lên văn phong thường xuyên hơn . 
+   * Mong muốn AWS cho lên văn phong thường xuyên hơn . 
 - Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Có vì AWS là một công ty lớn và có nhiều cơ hội tham gia các thi trường lao động liên quan đến AWS
-- Góp ý khác (tự do chia sẻ) 
+   * Có vì AWS là một công ty lớn và có nhiều cơ hội tham gia các thi trường lao động liên quan đến AWS
+ 

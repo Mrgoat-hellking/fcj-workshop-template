@@ -97,7 +97,7 @@ CloudWatch, SNS giám sát, gửi cảnh báo và thông báo khi có sự cố;
 
 Dưới đây là sơ đồ luồng dữ liệu :
 
-<img src="/images/2-Proposal/OJT- ss3.drawio.png"/>
+<img src="/images/2-Proposal/OJT-SS4.png"/>
 
 #### 2.2 Kế hoạch kỹ thuật
 

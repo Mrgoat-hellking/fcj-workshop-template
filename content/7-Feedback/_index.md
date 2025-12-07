@@ -1,12 +1,10 @@
 ---
 title: "Sharing and Feedback"
-date: 2025-12-09
+date: 2025-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-
-
 
 
 ### Overall Evaluation
@@ -33,17 +31,16 @@ The company does not have a policy to provide internship allowances but does off
 
 ### Additional Questions
 - What did you find **most satisfying** during your internship? 
-- Being guided by mentors and shown what to do and what to improve. 
+    * Being guided by mentors and shown what to do and what to improve. 
 - What do you think the company **should improve** for future interns?  
-- Nothing
+    * Nothing
 - If recommending to a friend, would you **suggest they intern here**? Why or why not?  
-- Yes, because the FCJ program here is very good and beneficial for the future.
+    * Yes, because the FCJ program here is very good and beneficial for the future.
 
 ---
 
 ### Suggestions & Expectations
 - Do you have any suggestions to improve the internship experience?  
-- I hope AWS will allow more frequent access to the office.
+   * I hope AWS will allow more frequent access to the office.
 - Would you like to continue this program in the future?  
-- Yes, because AWS is a large company and offers many opportunities to participate in labor markets related to AWS
-- Any other comments (free sharing):
+   * Yes, because AWS is a large company and offers many opportunities to participate in labor markets related to AWS
