@@ -15,11 +15,11 @@ pre: " <b> 1.12. </b> "
 ### Tasks to be implemented this week:
 | Day | Task | Start date | Completion date | Resources |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | --------------- | ----------------------------------------- |
-| 2 | - Database Essentials with Amazon Relational Database Service (RDS) | 11/08/2025 | 11/08/2025 |
-| 3 | - Access Management with AWS Identity and Access Management (IAM) | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Serverless Automation with AWS Lambda | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - AWS CDK Advanced | August 14, 2025 | August 15, 2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Application Protection with AWS WAF | August 15, 2025 | August 15, 2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Database Essentials with Amazon Relational Database Service (RDS) | 24/11/2025 | 24/11/2025 |
+| 3 | - Access Management with AWS Identity and Access Management (IAM) | 25/11/2025 | 25/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Serverless Automation with AWS Lambda | 26/11/2025 | 26/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - AWS CDK Advanced | 27/11/2025 | 27/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Application Protection with AWS WAF | 28/11/2025 | 28/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Results achieved in week 12:

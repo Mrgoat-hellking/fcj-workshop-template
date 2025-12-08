@@ -359,4 +359,6 @@ Một sản phẩm sẽ được coi là chấp nhận được khi đáp ứng 
 - Nếu phát hiện vấn đề → Sẽ gửi thông báo từ chối kèm theo phản hồi.
 - Các bản sửa lỗi sẽ được áp dụng và phiên bản sửa đổi sẽ được gửi lại để xem xét.
 - Nếu không nhận được phản hồi vào cuối thời gian xem xét → Sản phẩm được coi là đã được chấp nhận.
-- Sau khi hoàn thành mỗi cột mốc, nhóm sẽ nộp các sản phẩm và tài liệu.
+- Sau khi hoàn thành mỗi cột mốc, nhóm sẽ nộp các sản phẩm và tài liệu.<br>
+
+[Tải file .docx](/static/files/Proposal_FFF.docx)

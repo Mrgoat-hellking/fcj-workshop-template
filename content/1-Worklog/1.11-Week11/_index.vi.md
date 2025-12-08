@@ -15,11 +15,11 @@ pre: " <b> 1.11. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Hybrid DNS Management with Amazon Route53                                           | 11/08/2025   | 11/08/2025      |
-| 3   | - Building Serverless CRUD with Lambda and DynamoDB                      | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Serverless Storage and Auth with AWS Amplify | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Frontend Integration with API Gateway       | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Network Integration with VPC Peering                                  | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Hybrid DNS Management with Amazon Route53                                           | 17/11/2025   | 17/11/2025      |
+| 3   | - Building Serverless CRUD with Lambda and DynamoDB                      | 18/11/2025   | 18/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Serverless Storage and Auth with AWS Amplify | 19/11/2025   | 19/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Frontend Integration with API Gateway       | 20/11/2025   | 20/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Network Integration with VPC Peering                                  | 21/11/2025   | 21/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 11:

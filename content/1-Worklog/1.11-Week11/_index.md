@@ -15,11 +15,11 @@ pre: " <b> 1.11. </b> "
 ### Tasks to be implemented this week:
 | Day | Task | Start Date | Completion Date | Resources |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2 | - Hybrid DNS Management with Amazon Route53 | 11/08/2025 | 11/08/2025 |
-| 3 | - Building Serverless CRUD with Lambda and DynamoDB | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Serverless Storage and Auth with AWS Amplify | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Frontend Integration with API Gateway | 08/14/2025 | 08/15/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Network Integration with VPC Peering | 08/15/2025 | 08/15/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Hybrid DNS Management with Amazon Route53 | 17/11/2025 | 17/11/2025 |
+| 3 | - Building Serverless CRUD with Lambda and DynamoDB | 18/11/2025 | 18/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Serverless Storage and Auth with AWS Amplify | 19/11/2025 | 19/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Frontend Integration with API Gateway | 20/11/2025 | 20/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Network Integration with VPC Peering | 21/11/2025 | 21/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Results achieved in week 11:
 

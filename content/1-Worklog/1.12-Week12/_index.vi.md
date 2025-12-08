@@ -15,11 +15,11 @@ pre: " <b> 1.12 </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Database Essentials with Amazon Relational Database Service (RDS)                    | 11/08/2025   | 11/08/2025      |
-| 3   | - Access Management with AWS Identity and Access Management (IAM)                         | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Serverless Automation with AWS Lambda| 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - AWS CDK Advanced      | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Application Protection with AWS WAF                             | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Database Essentials with Amazon Relational Database Service (RDS)                    | 24/11/2025   | 24/11/2025      |
+| 3   | - Access Management with AWS Identity and Access Management (IAM)                         | 25/11/2025   | 25/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Serverless Automation with AWS Lambda| 26/11/2025   | 26/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - AWS CDK Advanced      | 27/11/2025   | 27/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Application Protection with AWS WAF                             | 28/11/2025   | 28/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 12:
