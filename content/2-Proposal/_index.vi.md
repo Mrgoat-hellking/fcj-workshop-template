@@ -244,7 +244,6 @@ Dự án hiện đã sẵn sàng mở rộng người dùng thật và tích h�
 - IAM:               Free
 - CloudWatch:        $2.00
 - SNS:               $0.10
-- SES:               $0.20
 - CloudFormation:    Free
 - GitLab CI/CD  :    $3.00
 - WS Config / Setup & Test migration tools $5.00 (1 lần)
@@ -342,3 +341,22 @@ Email/Thông tin liên hệ : ducdmse182938@fpt.edu.vn
 |Khách hàng |4616 |40% | 
 |Đối tác (Furious Five) |2308 |20% | 
 | AWS |4616 | 40%|
+
+### 7. CHẤP NHẬN
+
+Vì dự án này hiện đang ở giai đoạn trình bày và chưa được khách hàng chính thức đánh giá, nên quy trình chấp nhận sau đây được đề xuất cho các giai đoạn phân phối trong tương lai:
+
+#### 7.1 Tiêu chí Chấp nhận (Đề xuất)
+Một sản phẩm sẽ được coi là chấp nhận được khi đáp ứng các tiêu chí sau:
+- Các tính năng chức năng hoạt động như đã chỉ định (xác thực, quản lý công thức, tính năng xã hội, chức năng AI).
+- Tất cả các API đều phản hồi chính xác và tích hợp với các dịch vụ AWS (Lambda, API Gateway, RDS, S3).
+- Đáp ứng các yêu cầu bảo mật (xác minh JWT, HTTPS, kiểm soát truy cập, mã hóa dữ liệu).
+- Giao diện người dùng hoạt động như mong đợi trên các thiết bị được hỗ trợ.
+- Không xuất hiện lỗi nghiêm trọng nào trong quá trình thực hiện kiểm thử.
+#### 7.2 QUY TRÌNH CHẤP NHẬN
+- Thời gian xem xét: 8 ngày làm việc để đánh giá và kiểm thử.
+- Nếu được chấp nhận → Sản phẩm được ký duyệt.
+- Nếu phát hiện vấn đề → Sẽ gửi thông báo từ chối kèm theo phản hồi.
+- Các bản sửa lỗi sẽ được áp dụng và phiên bản sửa đổi sẽ được gửi lại để xem xét.
+- Nếu không nhận được phản hồi vào cuối thời gian xem xét → Sản phẩm được coi là đã được chấp nhận.
+- Sau khi hoàn thành mỗi cột mốc, nhóm sẽ nộp các sản phẩm và tài liệu.

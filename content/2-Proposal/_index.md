@@ -351,3 +351,22 @@ Email/Contact information: ducdmse182938@fpt.edu.vn
 |Customer |4616 |40% |
 |Partner (Furious Five) |2308 |20% |
 | AWS |4616 | 40%|
+
+### 7.	ACCEPTANCE
+
+Since this project is currently at the presentation stage and has not yet been formally evaluated by a customer, the following acceptance process is proposed for future delivery phases:
+
+#### 7.1 Acceptance Criteria (Proposed)
+A deliverable will be considered acceptable when it meets the following criteria:
+-	Functional features work as specified (authentication, recipe management, social features, AI functions).
+-	All APIs respond correctly and integrate with AWS services (Lambda, API Gateway, RDS, S3).
+-	Security requirements are met (JWT verification, HTTPS, access control, data encryption).
+-	UI works as expected on supported devices.
+-	No critical errors appear during test execution.
+#### 7.2 ACCEPTANCE PROCESS
+-	Review period: 8 business days for evaluation and testing.
+-	If accepted → Deliverable is signed off.
+-	If issues are found → A rejection notice will be issued with feedback.
+-	Fixes will be applied and a revised version will be resubmitted for review.
+-	If no response is received by the end of the review period → Deliverable is deemed accepted.
+-	After completing each milestone, the team submits the deliverables and documentation.
