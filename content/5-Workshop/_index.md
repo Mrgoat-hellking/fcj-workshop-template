@@ -34,12 +34,12 @@ Frontend Layer – Deploy the interface on Amplify and distribute content via Cl
 
 #### Content
 
-1. [Workshop Overview](5.1-workshop-overview)
-2. [Setup Environment](5.2-setup-environment/)
-3. [CDK Bootstrap](5.3-cdk-bootstrap/)
-4. [Configure Infrastructure Stacks](5.4-configure-stacks/)
-5. [Configure API & Lambda](5.6-configure-api-lambda/)
-6. [Deploy Backend Services](5.7-deploy-backend/)
-7. [Test Endpoints End-to-End](5.8-test-endpoints/)
-8. [Push to GitLab](5.9-push-gitlab/)
-9. [Clean up](5.11-cleanup/)
+1. [Workshop Overview](5.01-workshop-overview)
+2. [Setup Environment](5.02-setup-environment/)
+3. [CDK Bootstrap](5.03-cdk-bootstrap/)
+4. [Configure Infrastructure Stacks](5.04-configure-stacks/)
+5. [Configure API & Lambda](5.05-configure-api-lambda/)
+6. [Deploy Backend Services](5.06-deploy-backend/)
+7. [Test Endpoints End-to-End](5-07test-endpoints/)
+8. [Push to GitLab](5.08-push-gitlab/)
+9. [Clean up](5.09-cleanup/)
