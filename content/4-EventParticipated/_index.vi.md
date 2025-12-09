@@ -46,3 +46,12 @@ Trong quá trình thực tập, em đã tham gia 4 events, với mỗi event là
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
+
+### [Event 5](4.5-Event5/)
+&emsp;**Tên sự kiện:** AWS Bedrock, Agent Core & the Future of AI Security Pillar
+
+&emsp;**Thời gian:** 09:00 ngày 29/11/2025
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự 

@@ -6,7 +6,8 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-During my internship, I participated in 4 events, each event was a memorable experience with new, interesting and useful knowledge, along with gifts and wonderful moments. ### [Event 1](4.1-Event1/)
+During my internship, I participated in 4 events, each event was a memorable experience with new, interesting and useful knowledge, along with gifts and wonderful moments. 
+### [Event 1](4.1-Event1/)
 &emsp;**Event Name:** DX Talk#7: Reinventing DevSecOps with AWS Generative AI
 
 &emsp;**Time:** 09:00 October 16, 2025
@@ -35,6 +36,15 @@ During my internship, I participated in 4 events, each event was a memorable exp
 
 ### [Event 4](4.4-Event4/)
 &emsp;**Event name:** AWS Cloud Mastery Series #3 — According to AWS Well-Architected Security Pillar
+
+&emsp;**Time:** 09:00 November 29/11/2025
+
+&emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+&emsp;**Role in the event:** Attendees
+
+### [Event 5](4.5-Event5/)
+&emsp;**Event name:** AWS Bedrock, Agent Core & the Future of AI AgentsWell-Architected Security Pillar
 
 &emsp;**Time:** 09:00 November 29/11/2025
 
