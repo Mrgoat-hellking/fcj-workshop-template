@@ -3,7 +3,7 @@ title: "Push lên GitLab"
 date: 2025-12-01
 weight: 9
 chapter: false
-pre: " <b> 5.09. </b> "
+pre: " <b> 5.08. </b> "
 ---
 
 #### Tổng quan

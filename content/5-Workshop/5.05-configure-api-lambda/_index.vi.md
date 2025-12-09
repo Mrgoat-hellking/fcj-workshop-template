@@ -3,7 +3,7 @@ title: "Cấu hình API & Lambda"
 date: 2025-12-01
 weight: 6
 chapter: false
-pre: " <b> 5.06. </b> "
+pre: " <b> 5.05. </b> "
 ---
 
 #### Tổng quan

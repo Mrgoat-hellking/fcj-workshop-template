@@ -3,7 +3,7 @@ title: "Dọn dẹp tài nguyên"
 date: 2025-12-01
 weight: 11
 chapter: false
-pre: " <b> 5.11. </b> "
+pre: " <b> 5.09. </b> "
 ---
 
 #### Tổng quan
