@@ -33,12 +33,12 @@ Frontend Layer – Triển khai giao diện trên Amplify và phân phối nội
 
 #### Nội dung
 
-1. [Tổng quan Workshop](5.1-workshop-overview)
-2. [Thiết lập Môi trường](5.2-setup-environment/)
-3. [CDK Bootstrap](5.3-cdk-bootstrap/)
-4. [Cấu hình Infrastructure Stacks](5.4-configure-stacks/)
-5. [Cấu hình API & Lambda](5.5-configure-api-lambda/)
-6. [Triển khai Backend Services](5.6-deploy-backend/)
-7. [Kiểm tra Endpoints End-to-End](5.7-test-endpoints/)
-8. [Push lên GitLab](5.8-push-gitlab/)
-9. [Dọn dẹp tài nguyên](5.9-cleanup/)
+1. [Tổng quan Workshop](5.01-workshop-overview)
+2. [Thiết lập Môi trường](5.02-setup-environment/)
+3. [CDK Bootstrap](5.03-cdk-bootstrap/)
+4. [Cấu hình Infrastructure Stacks](5.04-configure-stacks/)
+5. [Cấu hình API & Lambda](5.05-configure-api-lambda/)
+6. [Triển khai Backend Services](5.06-deploy-backend/)
+7. [Kiểm tra Endpoints End-to-End](5.07-test-endpoints/)
+8. [Push lên GitLab](5.08-push-gitlab/)
+9. [Dọn dẹp tài nguyên](5.09-cleanup/)
