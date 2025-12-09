@@ -370,4 +370,5 @@ A deliverable will be considered acceptable when it meets the following criteria
 -	Fixes will be applied and a revised version will be resubmitted for review.
 -	If no response is received by the end of the review period → Deliverable is deemed accepted.
 -	After completing each milestone, the team submits the deliverables and documentation. <br>
-[Tải file .docx](/static/files/Proposal_FFF.docx)
+
+ <a href="https://mrgoat-hellking.github.io/fcj-workshop-template/files/Proposal_FFF.docx" download="Proposal_FFF.docx"><strong>!!Download Full Proposal (DOCX)</strong></a>
