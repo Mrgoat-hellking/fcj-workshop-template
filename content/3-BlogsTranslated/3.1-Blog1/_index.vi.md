@@ -6,134 +6,101 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Giúp khách hàng triển khai các AI agent sẵn sàng cho sản xuất ở quy mô lớn
+# Nomalab tự động hóa phát hiện ngắt quảng cáo trong quy trình làm việc của phương tiện truyền thông với AWS
 
-  *by Swami Sivasubramanian ngày 16/07/2025 trong Amazon Bedrock, Amazon Connect, Amazon Nova, Amazon Q, Amazon Simple Storage Service (S3), Announcements, AWS Inferentia, AWS Trainium, AWS Transform, Featured, Thought Leadership* 
+*bởi Thomas Buatois, Iryna Oliinykova và Ken Shek vào ngày 04 tháng 4 năm 2025 trong Amazon Bedrock, Amazon Machine Learning, Amazon OpenSearch Service, Amazon Rekognition, Amazon Transcribe, Analytics, Artificial Intelligence, AWS Elemental MediaConvert, Data Science & Analytics for Media, Generative AI, Media & Entertainment, Media Services, Media Chain & Archive, Monetization*
 
-AI agent được dự đoán sẽ có tác động mang tính cách mạng như chính Internet, cho phép tự động hóa, giải quyết các vấn đề phức tạp và thúc đẩy đổi mới. Tuy nhiên, việc đưa AI agent vào vận hành ở quy mô lớn không chỉ dừng lại ở huấn luyện mô hình lớn—mà còn đòi hỏi một kiến trúc đảm **bảo bảo mật, độ tin cậy, khả năng mở rộng và tính linh hoạt**.
+**Ngành Truyền thông và Giải trí (M&E)** đang trải qua một sự chuyển đổi chưa từng có, với khối lượng và độ phức tạp của nội dung tiếp tục tăng trưởng nhanh chóng.
+Để duy trì tính cạnh tranh, các đài truyền hình và nhà xuất bản phải tìm ra các giải pháp sáng tạo để tối ưu hóa quy trình làm việc của họ từ khâu tiếp nhận đến phân phối.
 
-AWS giải quyết thách thức này bằng kiến trúc dựa trên **microservices**: mỗi năng lực của agent (bộ nhớ, định danh, giám sát, truy cập công cụ, tùy biến) được đóng gói thành một dịch vụ nhỏ, độc lập và kết nối lỏng lẻo thông qua một hub trung tâm. Cách phân tách này giúp tăng tính linh hoạt, dễ dàng thêm hoặc thay thế thành phần, đồng thời cho phép tổ chức tập trung vào giá trị kinh doanh thay vì phải xây dựng hạ tầng từ đầu.
+Nhận thức được thách thức này, Nomalab, một nền tảng quản lý phương tiện truyền thông dựa trên đám mây hàng đầu có sẵn trên AWS Marketplace, đã tận dụng sức mạnh của AI và Generative AI thông qua Hướng dẫn Media2Cloud trên AWS (Media2Cloud).
 
----
-
-## Hướng dẫn kiến trúc
-
-So với cách tiếp cận nguyên khối (monolithic), AWS tách nhỏ chức năng của agent thành nhiều microservices:
-
-**AgentCore**: môi trường serverless để điều phối các agent.
-
-**Dịch vụ chức năng**: bộ nhớ, định danh, giám sát, gateway, bộ thông dịch mã.
-
-**Dịch vụ tùy biến mô hình**: microservice fine-tuning Amazon Nova.
-
-Thiết kế này cho phép khách hàng tự do chọn mô hình, tích hợp dữ liệu hiện có và kết nối liền mạch với các framework mã nguồn mở.
-
-## Lựa chọn công nghệ và phạm vi giao tiếp
-|Phạm vi giao tiếp	                     |  Công nghệ                                                           |
-|----------------------------------------|----------------------------------------------------------------------|          
-|Bên trong một microservice 	           | AWS Lambda, Step Functions                                           |
-|Giữa các microservice trong một agent	 |Amazon SNS, AWS CloudFormation cross-stack references                 |
-|Giữa các dịch vụ/agent	                 |Amazon EventBridge, API Gateway, AWS Cloud Map                        |
-
-## Hub Pub/Sub
-
-Mô hình **pub/sub hub** là trung tâm trong cách tiếp cận của AWS:
-
-- Mỗi microservice chỉ giao tiếp với hub, không liên kết trực tiếp với các microservice khác.
-
-- Kết quả, lỗi hoặc đầu ra trung gian được đẩy vào hub để xử lý tiếp.
-
-- Lợi ích: giảm gọi đồng bộ, dễ mở rộng, giữ cho các thành phần tách rời.
-
-- Hạn chế: cần giám sát và phối hợp để tránh tin nhắn sai hướng hoặc trùng lặp.
+Media2Cloud là một nền tảng mã nguồn mở, không máy chủ, minh họa cách thức áp dụng các công nghệ đám mây và AI mới nhất có thể thúc đẩy hiệu quả và định vị các tổ chức truyền thông hướng đến thành công lâu dài.
+Bài viết này khám phá cách Nomalab sử dụng sáng tạo các dịch vụ AWS và AI tổng hợp đang chuyển đổi quy trình làm việc truyền thông và thiết lập một tiêu chuẩn mới về hiệu quả xử lý nội dung.
 
 ---
 
-## Microservice lõi
+## Trường hợp sử dụng Nomalab
 
-Nền tảng của giải pháp, cung cấp lớp dữ liệu và giao tiếp:
+Khách hàng của Nomalab—bao gồm các tập đoàn truyền thông lớn—đang phải đối mặt với nhu cầu ngày càng tăng về việc cung cấp nhiều nội dung hơn cho các nền tảng truyền hình tuyến tính và OTT hơn bao giờ hết. Tự động hóa đã trở nên thiết yếu để duy trì lợi thế cạnh tranh về trải nghiệm người xem và hiệu quả hoạt động.
 
-- **Amazon** S3 cho dữ liệu và artifacts.
+Một điểm khó khăn chính trong quy trình phân phối nội dung là việc tạo siêu dữ liệu phân đoạn cho nội dung dài, đặc biệt là việc xác định chuỗi tiêu đề, phần giới thiệu cuối phim và các điểm chèn quảng cáo tôn trọng mạch truyện.
+Mục tiêu là tạo ra một hệ thống tạo siêu dữ liệu chính xác mà không cần sự can thiệp của con người, giúp tăng tốc đáng kể việc chuẩn bị nội dung và giảm chi phí.
 
-- **Amazon DynamoDB** cho metadata và catalog.
+“Khách hàng của chúng tôi cần có khả năng chèn quảng cáo liền mạch vào chương trình của họ, nhưng việc xem xét thủ công hàng giờ cảnh quay để xác định các đoạn quảng cáo xen kẽ phù hợp lại cực kỳ tốn thời gian”,
+Romane Lafon, Giám đốc Công nghệ Truyền thông Kỹ thuật số tại Nomalab, giải thích.
+“Chúng tôi biết AI có thể là giải pháp, nhưng chúng tôi muốn một giải pháp có độ chính xác cao và tiết kiệm chi phí để vận hành trên quy mô lớn”.
 
-- **AWS Lambda** đảm bảo ghi dữ liệu và logic runtime nhất quán.
-
-- **Amazon SNS** Topic làm hub trung tâm.
-
-Điều này đảm bảo mọi thao tác ghi vào data lake và catalog đều được kiểm soát và nhất quán.
-
----
-
-## Microservice cửa ngõ (Front Door)
-
-Điểm truy cập chính cho các yêu cầu bên ngoài:
-
-- Amazon API Gateway cung cấp giao diện REST.
-
-- Amazon Cognito (OIDC) quản lý xác thực và phân quyền.
-
-- Cơ chế loại bỏ trùng lặp được xây dựng với DynamoDB, khắc phục giới hạn của SNS FIFO và cho phép phát hiện trùng lặp chủ động.
+Để đáp ứng các tiêu chuẩn chất lượng nghiêm ngặt, Nomalab đặt mục tiêu đạt độ chính xác trên 90% trong việc xác định các điểm phân đoạn—tương đương hoặc vượt trội hơn hiệu suất của con người. Điều này giúp khách hàng tự tin áp dụng hoàn toàn các quy trình làm việc tự động.
 
 ---
 
-## Microservices xử lý
+## Tích hợp Media2Cloud và Trí tuệ Nhân tạo (AI)
 
-Agent thường cần các công cụ chuyên biệt như duyệt web, thực thi mã, hoặc tìm kiếm. Những công cụ này được triển khai dưới dạng microservices:
+Khi đối mặt với việc tự động hóa phát hiện đoạn quảng cáo xen kẽ, Nomalab đã chuyển sang Media2Cloud. Nền tảng này không chỉ đơn giản hóa việc di chuyển nội dung video và siêu dữ liệu sang AWS mà còn khai thác những hiểu biết sâu sắc hơn về nội dung bằng cách tận dụng khả năng trích xuất siêu dữ liệu được hỗ trợ bởi AI.
 
-- Lambda triggers đăng ký với hub và lọc thông điệp.
-
-- Step Functions điều phối các pipeline (ví dụ: tiền xử lý, gọi mô hình).
-
-- Lambda functions thực thi logic phân tích hoặc chuyển đổi cụ thể.
-
-- Kết quả hoặc lỗi được trả về hub cho các dịch vụ kế tiếp.
+“Bằng cách tích hợp Media2Cloud và các khả năng AI tiên tiến, chúng tôi đã có thể phát triển một giải pháp mạnh mẽ độc đáo, tự động hóa các tác vụ chính và mang lại kết quả có thể đo lường được cho khách hàng của chúng tôi”, Lafon cho biết.
 
 ---
 
-## Microservice tùy biến mô hình (Nova)
+## Cách thức hoạt động
+Media2Cloud sử dụng kết hợp AI/ML truyền thống và AI tạo sinh để phát hiện các điểm ngắt nội dung tự nhiên—được gọi là điểm chương—khi bối cảnh hình ảnh và tường thuật thay đổi.
+**Bước 1: Phát hiện Cảnh quay Trực quan**
+Quá trình bắt đầu với Amazon Rekognition Segment API, cung cấp khả năng phát hiện cảnh quay chính xác đến từng khung hình và nhận dạng tín hiệu kỹ thuật (ví dụ: thanh màu, khung hình đen, phần giới thiệu cuối phim).
 
-Fine-tuning được xử lý như một microservice riêng biệt:
+---
+## Bước 2: Nhóm Cảnh quay thành Cảnh
+Các cảnh quay được phát hiện sẽ được nhóm lại thành các cảnh logic bằng mô hình Nhúng Đa phương thức Amazon Titan thông qua Amazon Bedrock.
+Các khung hình được chuyển đổi thành các nhúng vector, nắm bắt ý nghĩa ngữ nghĩa, được lưu trữ trong Amazon OpenSearch Service bằng cách sử dụng chỉ mục K-NN để nhóm các khung hình tương tự lại với nhau.
 
-- Hỗ trợ cả fine-tuning toàn bộ và kỹ thuật tham số hiệu quả.
-
-- Phương pháp gồm SFT, DPO, RLHF, CPT và Distillation.
-
-- Chạy độc lập, nên việc cập nhật hoặc huấn luyện lại không ảnh hưởng đến runtime tổng thể.
-
-## Các tính năng mới trong giải pháp
-1. Amazon Bedrock AgentCore
-
-- Môi trường serverless cho agent.
-
-- Cách ly phiên làm việc và khả năng quan sát.
-
-- Tích hợp với các framework mã nguồn mở.
-
-2. Hỗ trợ công cụ mở rộng
-
-- Microservices cho bộ nhớ, định danh, gateway, trình duyệt và bộ thông dịch.
-
-- Mỗi thành phần có thể thay thế hoặc mở rộng dễ dàng.
-
-3. Sự chấp nhận từ khách hàng
-
-- Các doanh nghiệp như Itaú Unibanco, Innovaccer, Boomi, Box, và Epsilon đã áp dụng kiến trúc này để triển khai AI agent quy mô lớn, sẵn sàng cho sản xuất.
+---
+## Bước 3: Phân tích Luồng Hội thoại
+Tiếp theo, Amazon Transcribe chuyển đổi lời nói thành văn bản có dấu thời gian, và Amazon Bedrock phân tích luồng hội thoại để xác định các chuyển tiếp chủ đề, giúp tạo ra các điểm ngắt chương tự nhiên phù hợp với tín hiệu trực quan.
 
 
-```yaml
-Outputs:
-  AgentCoreTopic:
-    Value: !Ref AgentCoreTopic
-    Export:
-      Name: !Sub ${AWS::StackName}-AgentCoreTopic
+---
 
-  AgentMemoryTable:
-    Value: !Ref AgentMemoryTable
-    Export:
-      Name: !Sub ${AWS::StackName}-AgentMemoryTable
+## Bước 4: Căn chỉnh Tín hiệu Âm thanh và Hình ảnh
+Bằng cách căn chỉnh các cảnh được phát hiện với các đoạn hội thoại chuyển tiếp, quy trình làm việc sẽ xác định các cơ hội ngắt quảng cáo tự nhiên, không gây khó chịu - những điểm mà các đoạn quảng cáo gián đoạn ít gây ảnh hưởng nhất đến trải nghiệm của người xem.
 
-  NovaCustomizationJob:
-    Value: !Ref NovaCustomizationJob
-    Export:
-      Name: !Sub ${AWS::StackName}-NovaCustomizationJob
+---
+## Đặt Ngắt Quảng cáo
+Dựa trên nền tảng này, tính năng phát hiện ngắt quảng cáo của Media2Cloud xác định chính xác các cơ hội đặt quảng cáo chính xác theo từng khung hình, đồng thời tạo siêu dữ liệu theo ngữ cảnh bằng IAB Content Taxonomy V3 và GARM Taxonomy.
+
+Lớp ngữ cảnh này cho phép các máy chủ quyết định quảng cáo đưa ra các lựa chọn vị trí thông minh dựa trên nội dung xung quanh.
+
+---
+
+## Tích hợp
+Nomalab mở rộng Media2Cloud với giai đoạn hậu đánh giá độc quyền, phản ánh quá trình ra quyết định của con người.
+
+Các quy tắc kinh doanh tùy chỉnh tinh chỉnh và ưu tiên các cơ hội ngắt quảng cáo, đảm bảo chỉ chọn những ngắt quảng cáo phù hợp và chiến lược nhất.
+
+Sự chuyển đổi nàyrms dữ liệu phát hiện thô thành thông tin chi tiết ở cấp độ sản xuất, mang lại vị trí quảng cáo tối ưu đồng thời duy trì tính toàn vẹn của trải nghiệm xem.
+
+Hình 6 – Quy trình phân tích của Nomalab tích hợp các dịch vụ AWS và logic hậu đánh giá độc quyền.
+“Việc tích hợp với Media2Cloud là rất quan trọng,” Lafon nói.
+“Nó cung cấp một nền tảng đám mây có khả năng mở rộng, để chúng tôi có thể tập trung vào các tính năng được hỗ trợ bởi AI mang lại giá trị thực sự.
+
+Khả năng AI tạo sinh của Amazon Bedrock là một bước đột phá — kết hợp thị giác máy tính, chuyển giọng nói thành văn bản, hiểu ngôn ngữ tự nhiên và các quy tắc kinh doanh để đạt được độ chính xác gần như con người.”
+
+## Lợi ích và Kết quả
+Bằng cách tự động hóa phát hiện quảng cáo ngắt quãng, Nomalab đã cải thiện đáng kể hiệu quả quy trình làm việc.
+
+Một người vận hành thủ công có thể xử lý khoảng 25 chương trình mỗi ngày; giờ đây, với tính năng tự động hóa của AWS, toàn bộ thư viện có thể được phân tích trong vài giờ — ở quy mô lớn và với độ chính xác nhất quán.
+“Mục tiêu chung của chúng tôi là đạt tỷ lệ chính xác 90% trở lên, và chúng tôi gần đạt được hoặc cao hơn tùy thuộc vào loại nội dung,” Lafon nói.
+
+“Điều tuyệt vời nhất là khách hàng của chúng tôi không phải lo lắng về sự phức tạp—họ chỉ cần nhận được nội dung đa phương tiện được làm giàu đầy đủ, sẵn sàng để tiếp nhận và phân phối.”
+Khả năng mở rộng là một lợi ích quan trọng khác:
+“Chúng tôi xử lý hàng chục nghìn nội dung mỗi năm mà vẫn kiểm soát được chi phí,” Lafon nói thêm. “Đây là lợi ích đôi bên cùng có lợi cho chúng tôi và khách hàng.”
+
+## Hướng tới Tương lai
+Khi ngành truyền thông phát triển, quy trình làm việc của Nomalab làm nổi bật cách AWS và AI tạo sinh đang chuyển đổi hoạt động truyền thông.
+“Đây chỉ là bước khởi đầu,” Lafon nói.
+“Chúng tôi đang khám phá tự động hóa để phân loại nội dung, làm giàu siêu dữ liệu và thậm chí là kiểm soát chất lượng truyền thông. Tiềm năng là vô hạn.”
+
+Bằng cách kết hợp Amazon Bedrock, Amazon Rekognition và Amazon Transcribe, Nomalab chứng minh sức mạnh của việc kết hợp công nghệ AI và đám mây để đạt được độ chính xác ngang tầm con người trong các quy trình làm việc tự động.
+Sự kết hợp giữa các dịch vụ AI/ML nền tảng và AI tạo sinh này mở ra những hiểu biết mới từ nội dung đa phương tiện—thiết lập một chuẩn mực mới cho tự động hóa trong ngành truyền thông.
+Nhìn về tương lai, khi AI dựa trên đám mây tiếp tục phát triển, những công nghệ này sẽ thúc đẩy các quy trình xử lý nội dung ngày càng thông minh và tự động - trở thành yếu tố khác biệt quan trọng cho các tổ chức truyền thông cạnh tranh.
+
+Đối với các công ty truyền thông đang tìm kiếm các hoạt động bền vững trong tương lai, thành công của Nomalab trên AWS minh chứng cho những gì có thể đạt được bằng cách áp dụng những cải tiến mới nhất về AI, điện toán đám mây và AI tạo sinh - chuyển đổi quy trình làm việc truyền thông cho kỷ nguyên số.

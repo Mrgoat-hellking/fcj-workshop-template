@@ -8,117 +8,111 @@ pre: " <b> 4.1. </b> "
 
 
 
-# Summary Report: “Cloud Day Vietnam 2025 : AI Edition”
+# Summary: DX<inAction> Talk #7 – Reinventing DevSecOps with AWS Generative AI
 
-### Event Objectives
+## Purpose of Attending the Event
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Understand the trend of **AI in DevSecOps** and the strategic shift in the enterprise.
+- Learn the model of **Generative AI** integration into the entire software development process.
+- Capture insights from **real-life case studies** of CMC Global and AWS.
+- Orientate skills for **DevSecOps Engineer** in the context of high automation and security requirements.
 
-### Speakers
+---
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+## Speaker List
 
-### Key Highlights
+- **Le Thanh Duc** – Cloud Delivery Manager, CMC Global
+- **Du Quoc Thanh** – Technical Leader, CMC Global
+- **Guest: Van Hoang Kha** – Cloud Engineer, AWS Community Builder
 
-#### Identifying the drawbacks of legacy application architecture
+---
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+## Highlights
 
-#### Transitioning to modern application architecture – Microservices
+### 1. Integrated AI solutions in DevSecOps
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- Automate CI/CD pipeline and apply continuous security checks.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- Predict risks with AI and respond in real time.
 
-#### Domain-Driven Design (DDD)
+- Eliminate manual processes, reduce errors and bottlenecks.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+### 2. Case Study from CMC Global & AWS
 
-#### Event-Driven Architecture
+- Analyze real DevSecOps processes with AI as the core.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- Automate SAST/DAST, secret scanning, IaC validation.
 
-#### Compute Evolution
+- Lessons on implementing AI in large-scale enterprises.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+### 3. DevSecOps career orientation
 
-#### Amazon Q Developer
+- **Shift-left Security** mindset throughout the entire SDLC.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Important skills: CI/CD, IaC, automation, cloud security, GenAI.
 
-### Key Takeaways
+- The role of AI in improving development speed and quality.
 
-#### Design Mindset
+---
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+## What We Learned
 
-#### Technical Architecture
+### 1. Integrating AI & Automation
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- Understanding the **AI-Driven DevSecOps** model with the ability to analyze risks, automate security testing and intelligent monitoring.
 
-#### Modernization Strategy
+- AI shortens the time to detect and handle incidents, improving system safety.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+### 2. Modern DevSecOps mindset
 
-### Applying to Work
+- Security must be integrated into the entire software development lifecycle.
+- Tools to master:
+- **Jenkins/GitLab CI** – CI/CD automation
+- **SonarQube** – SAST
+- **OWASP ZAP** – DAST
+- **Terraform** – IaC and automated infrastructure management
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+### 3. Generative AI Tools
 
-### Event Experience
+- Learn **Amazon Q Developer** with the following capabilities:
+- Generate code
+- Write tests
+- Detect vulnerabilities
+- Optimize DevSecOps workflow on AWS
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+---
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+## Apply to Work (Worklog Week 6)
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- Integrate DevSecOps thinking into ongoing projects.
+- Research and test Amazon Q Developer in the code review process.
+- Add SAST/DAST to CI/CD pipeline.
+- Optimize IaC with automated rules and policies.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+---
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+## Event Experience
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+### Expert Perspective
 
-#### Some event photos
-*Add your event photos here*  
+- Hear practical sharing about deploying Generative AI in large enterprise systems.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+- Understand how AI helps reduce operational and security workload.
+
+### The value of AI
+
+- Eliminate many manual tasks and reduce dependence on gatekeepers.
+
+- Increase automation and scalability of the system.
+
+### Personal orientation
+
+- Need to continuously update on Cloud, AI and security.
+
+- Focus on learning deeply on AWS Security and DevSecOps practices.
+
+---
+
+## Conclusion
+
+The event provides an overview and practice of **DevSecOps combined with Generative AI**, providing clear direction for technology engineers in improving capacity and applying it to practical projects on AWS. This is an important resource for developing DevSecOps skills in a modern environment.

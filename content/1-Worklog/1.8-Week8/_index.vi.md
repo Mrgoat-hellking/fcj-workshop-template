@@ -11,7 +11,8 @@ pre: " <b> 1.8. </b> "
 ### Mục tiêu tuần 8:
 
   * Tiếp tục học tập và làm quen với các dịch vụ của AWS
-  * Tìm hiểu và làm project
+  * Tìm hiểu và làm project 
+  * thi mid-term
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
@@ -20,7 +21,7 @@ pre: " <b> 1.8. </b> "
 | 3   | - CI/CD Pipeline with AWS CodePipeline <br>  - Automated Deployments with AWS CodePipeline <br> - DevOps with AWS CodePipeline | 28/10/2025   | 28/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 4   | - Hybrid Storage with AWS Storage Gateway <br> - Windows File Storage with Amazon FSx | 29/10/2025   | 29/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 5   | - Windows File Storage with Amazon FSx <br> - Building Advanced Applications with Amazon DynamoDB  | 30/10/2025   | 30/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Workflow Orchestration with AWS Step Functions <br> - Storage Performance Workshop  | 31/10/2025   | 31/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Workflow Orchestration with AWS Step Functions <br> - Storage Performance Workshop <br> - mid-term  | 31/10/2025   | 31/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 8:

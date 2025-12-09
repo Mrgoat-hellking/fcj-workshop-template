@@ -12,7 +12,7 @@ pre: " <b> 1.8. </b> "
 
 * Continue learning and familiarizing yourself with AWS services
 * Learn and implement projects
-
+* 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |

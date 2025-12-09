@@ -87,7 +87,7 @@ Amazon Rekognition and Amazon Bedrock power image processing and generative AI f
 Observability & Security Layer
 CloudWatch, SNS, and SES provide monitoring, alerting, and system notifications.
 
-<img src="/images/2-Proposal/OJT-SS4.png"/>
+<img src="/images/2-Proposal/OJT-SS5.drawio.png"/>
 
 #### 2.2 Technical Implementation Plan
 
