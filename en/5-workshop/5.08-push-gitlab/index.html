@@ -1,0 +1,255 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="ducdmse182938@fpt.edu.vn"><link rel=icon href=https://mrgoat-hellking.github.io/fcj-workshop-template/images/favicon.png type=image/png><title>Push to GitLab :: Internship Report</title>
+<link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/nucleus.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/fontawesome-all.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/hybrid.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/featherlight.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/perfect-scrollbar.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/auto-complete.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/atom-one-dark-reasonable.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/theme.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/hugo-theme.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/theme-workshop.css?1765312725 rel=stylesheet><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/jquery-3.3.1.min.js?1765312725></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.08-push-gitlab/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://mrgoat-hellking.github.io/fcj-workshop-template/><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/lunr.min.js?1765312725></script><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/auto-complete.js?1765312725></script><script type=text/javascript>var baseurl="https://mrgoat-hellking.github.io/fcj-workshop-template//en"</script><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/search.js?1765312725></script></div><div class=highlightable><ul class=topics><li data-nav-id=/en/1-worklog/ title=Worklog class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.9-week9/ title="Week 9 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.9-week9/><b>1.9. </b>Week 9 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.10-week10/ title="Week 10 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.10-week10/><b>1.10. </b>Week 10 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.11-week11/ title="Week 11 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.11-week11/><b>1.11. </b>Week 11 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/1-worklog/1.12-week12/ title="Week 12 Worklog" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/1-worklog/1.12-week12/><b>1.12. </b>Week 12 Worklog
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/en/2-proposal/ title=Proposal class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/2-proposal/><b>2. </b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/3-blogstranslated/ title="Translated Blogs" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/3-blogstranslated/><b>3. </b>Translated Blogs
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/3-blogstranslated/3.2-blog2/ title="Blog 2" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/3-blogstranslated/3.3-blog3/ title="Blog 3" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/3-blogstranslated/3.3-blog3/><b>3.3. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/en/4-eventparticipated/ title="Events Participated" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/4-eventparticipated/4.3-event3/ title="Event 3" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/4.3-event3/><b>4.3. </b>Event 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/4-eventparticipated/4.4-event4/ title="Event 4" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/4.4-event4/><b>4.4. </b>Event 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/4-eventparticipated/4.5-event5/ title="Event 5" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/4-eventparticipated/4.5-event5/><b>4.5. </b>Event 5
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/en/5-workshop/ title=Workshop class="dd-item
+parent"><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/5-workshop/5.01-workshop-overview/ title="Workshop Overview" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.01-workshop-overview/><b>5.01. </b>Workshop Overview
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.02-setup-environment/ title="Setup Environment" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.02-setup-environment/><b>5.02. </b>Setup Environment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.03-cdk-bootstrap/ title="CDK Bootstrap" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.03-cdk-bootstrap/><b>5.03. </b>CDK Bootstrap
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.04-configure-stacks/ title="Configure Infrastructure Stacks" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.04-configure-stacks/><b>5.04. </b>Configure Infrastructure Stacks
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.05-configure-api-lambda/ title="Configure API & Lambda" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.05-configure-api-lambda/><b>5.05. </b>Configure API & Lambda
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.06-deploy-backend/ title="Deploy Backend Services" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.06-deploy-backend/><b>5.06. </b>Deploy Backend Services
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.07-test-endpoints/ title="Test Endpoints End-to-End" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.07-test-endpoints/><b>5.07. </b>Test Endpoints End-to-End
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.08-push-gitlab/ title="Push to GitLab" class="dd-item
+active"><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.08-push-gitlab/><b>5.08. </b>Push to GitLab
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/5-workshop/5.09-cleanup/ title=Cleanup class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.09-cleanup/><b>5.09. </b>Cleanup
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/en/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/en/7-feedback/ title="Sharing and Feedback" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/7-feedback/><b>7. </b>Sharing and Feedback
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.08-push-gitlab/ selected>English</option><option id=vi value=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.08-push-gitlab/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/>Internship Report</a> > <a href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/>Workshop</a> > Push to GitLab</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li></li><li><a href=#step-1-initialize-git-repository>Step 1: Initialize Git Repository</a></li><li><a href=#step-2-create-gitignore>Step 2: Create .gitignore</a></li><li><a href=#step-3-stage-and-commit-files>Step 3: Stage and Commit Files</a></li><li><a href=#step-6-create-personal-access-token>Step 6: Create Personal Access Token</a></li><li><a href=#step-7-verify-push-on-gitlab>Step 7: Verify Push on GitLab</a></li><li><a href=#step-8-create-development-branch>Step 8: Create Development Branch</a></li><li><a href=#step-9-setup-branch-protection-optional>Step 9: Setup Branch Protection (Optional)</a></li><li><a href=#git-workflow-summary>Git Workflow Summary</a></li><li><a href=#commit-message-convention>Commit Message Convention</a></li><li><a href=#branch-naming-convention>Branch Naming Convention</a></li><li><a href=#troubleshooting>Troubleshooting</a></li><li><a href=#repository-checklist>Repository Checklist</a></li><li><a href=#next-steps>Next Steps</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Push to GitLab</h1><h4 id=overview>Overview</h4><p>Sau khi test thành công, bạn sẽ push code lên GitLab để version control và chuẩn bị cho CI/CD. Dự án OJT E-commerce có 3 phần chính cần quản lý: Infrastructure, Lambda, và Frontend.</p><h4 id=project-structure>Project Structure</h4><pre tabindex=0><code>OJT/
+├── OJT_infrastructure/      # CDK Infrastructure (TypeScript)
+├── OJT_lambda/             # Lambda Functions (JavaScript)
+├── OJT_frontendDev/        # Frontend (React + Vite)
+├── database/               # Database Scripts
+└── README.md               # Project documentation
+</code></pre><hr><h3 id=step-1-initialize-git-repository>Step 1: Initialize Git Repository</h3><p><strong>1. Navigate to Project Root</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>cd D:\AWS\Src\OJT
+</span></span></code></pre></div><p><strong>2. Check Git Status</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Check if Git is already initialized</span>
+</span></span><span style=display:flex><span>git status
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If not initialized:</span>
+</span></span><span style=display:flex><span>git init
+</span></span></code></pre></div><p><strong>3. Configure Git</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Set your name and email</span>
+</span></span><span style=display:flex><span>git config user.name <span style=color:#e6db74>&#34;Your Name&#34;</span>
+</span></span><span style=display:flex><span>git config user.email <span style=color:#e6db74>&#34;your.email@example.com&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Verify configuration</span>
+</span></span><span style=display:flex><span>git config --list
+</span></span></code></pre></div><hr><h3 id=step-2-create-gitignore>Step 2: Create .gitignore</h3><p><strong>1. Create .gitignore File</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Create .gitignore in project root</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>@&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Dependencies
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>node_modules/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>package-lock.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Build outputs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>dist/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>build/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.js.map
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cdk.out/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Environment variables
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env.local
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env.*.local
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># AWS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.pem
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.key
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Deployment packages
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.zip
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Logs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>logs/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.log
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>npm-debug.log*
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># IDE
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.vscode/settings.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.idea/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.swp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.swo
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># OS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.DS_Store
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Thumbs.db
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># CDK
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cdk.context.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># TypeScript
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.tsbuildinfo
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.d.ts
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.js
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>!vite.config.js
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>!eslint.config.js
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Lambda build
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>OJT_lambda/build/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;@</span> | Out-File -FilePath .gitignore -Encoding UTF8
+</span></span></code></pre></div><p><strong>2. Verify .gitignore</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Get-Content .gitignore
+</span></span></code></pre></div><hr><h3 id=step-3-stage-and-commit-files>Step 3: Stage and Commit Files</h3><p><strong>1. Add Files to Staging</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Add all files</span>
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Check what will be committed</span>
+</span></span><span style=display:flex><span>git status
+</span></span></code></pre></div><p><strong>2. Review Files to Commit</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># List files to be committed</span>
+</span></span><span style=display:flex><span>git diff --cached --name-only
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Expected files:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OJT_infrastructure/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OJT_lambda/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OJT_frontendDev/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># database/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># README.md</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># .gitignore</span>
+</span></span></code></pre></div><p><strong>3. Create Initial Commit</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Commit with message</span>
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Initial commit: OJT E-commerce infrastructure and backend&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Verify commit</span>
+</span></span><span style=display:flex><span>git log --oneline
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>### Step 4: Create GitLab Repository</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>**<span style=color:#ae81ff>1</span>. Login to GitLab**
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Go to https<span style=color:#960050;background-color:#1e0010>:</span>//gitlab.com/ and login with your account.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>**<span style=color:#ae81ff>2</span>. Create New Project**
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>1</span>. Click **<span style=color:#e6db74>&#34;New project&#34;</span>**
+</span></span><span style=display:flex><span><span style=color:#ae81ff>2</span>. Choose **<span style=color:#e6db74>&#34;Create blank project&#34;</span>**
+</span></span><span style=display:flex><span><span style=color:#ae81ff>3</span>. Fill <span style=color:#66d9ef>in</span> details<span style=color:#960050;background-color:#1e0010>:</span>
+</span></span><span style=display:flex><span>   - Project name<span style=color:#960050;background-color:#1e0010>:</span> `ojt-ecommerce`
+</span></span><span style=display:flex><span>   - Project slug<span style=color:#960050;background-color:#1e0010>:</span> `ojt-ecommerce`
+</span></span><span style=display:flex><span>   - Visibility<span style=color:#960050;background-color:#1e0010>:</span> **Private** (recommended)
+</span></span><span style=display:flex><span>   - Initialize with README<span style=color:#960050;background-color:#1e0010>:</span> **No** (we already have code)
+</span></span><span style=display:flex><span><span style=color:#ae81ff>4</span>. Click **<span style=color:#e6db74>&#34;Create project&#34;</span>**
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>**<span style=color:#ae81ff>3</span>. Copy Repository URL**
+</span></span></code></pre></div><p><a href=https://gitlab.com/your-username/ojt-ecommerce.git>https://gitlab.com/your-username/ojt-ecommerce.git</a></p><pre tabindex=0><code>
+---
+
+### Step 5: Add Remote and Push
+
+**1. Add GitLab Remote**
+
+```powershell
+# Add remote origin
+git remote add origin https://gitlab.com/your-username/ojt-ecommerce.git
+
+# Verify remote
+git remote -v
+</code></pre><p><strong>2. Push to GitLab</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Push to main branch</span>
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If your default branch is &#39;master&#39;:</span>
+</span></span><span style=display:flex><span>git branch -M main
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span></code></pre></div><p><strong>3. Enter Credentials</strong></p><p>When prompted:</p><ul><li>Username: Your GitLab username</li><li>Password: Your GitLab Personal Access Token (not password)</li></ul><p><em>Screenshot: Terminal showing successful push</em></p><hr><h3 id=step-6-create-personal-access-token>Step 6: Create Personal Access Token</h3><p>If you don&rsquo;t have a Personal Access Token:</p><p><strong>1. Go to GitLab Settings</strong></p><ol><li>Click your avatar → <strong>&ldquo;Preferences&rdquo;</strong></li><li>Go to <strong>&ldquo;Access Tokens&rdquo;</strong> in left sidebar</li></ol><p><strong>2. Create New Token</strong></p><ol><li>Token name: <code>OJT-Ecommerce-Token</code></li><li>Expiration date: Set appropriate date</li><li>Select scopes:<ul><li><input checked disabled type=checkbox> <code>read_repository</code></li><li><input checked disabled type=checkbox> <code>write_repository</code></li></ul></li><li>Click <strong>&ldquo;Create personal access token&rdquo;</strong></li></ol><p><strong>3. Save Token</strong></p><p>Copy and save the token securely. You won&rsquo;t be able to see it again.</p><h3 id=step-7-verify-push-on-gitlab>Step 7: Verify Push on GitLab</h3><p><strong>1. Check Repository on GitLab</strong></p><p>Go to your repository: <code>https://gitlab.com/your-username/ojt-ecommerce</code></p><p><strong>2. Verify Files</strong></p><p>Check that all files are uploaded:</p><ul><li><code>OJT_infrastructure/</code> - CDK Infrastructure</li><li><code>OJT_lambda/</code> - Lambda Functions</li><li><code>OJT_frontendDev/</code> - Frontend</li><li><code>database/</code> - Database Scripts</li><li><code>README.md</code> - Documentation</li><li><code>.gitignore</code> - Git ignore rules</li></ul><hr><h3 id=step-8-create-development-branch>Step 8: Create Development Branch</h3><p><strong>1. Create dev Branch</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Create and switch to dev branch</span>
+</span></span><span style=display:flex><span>git checkout -b dev
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Push dev branch to GitLab</span>
+</span></span><span style=display:flex><span>git push -u origin dev
+</span></span></code></pre></div><p><strong>2. Set Default Branch (Optional)</strong></p><p>On GitLab:</p><ol><li>Go to <strong>Settings</strong> → <strong>Repository</strong></li><li>Under <strong>Branch defaults</strong>, set <code>dev</code> as default branch</li></ol><hr><h3 id=step-9-setup-branch-protection-optional>Step 9: Setup Branch Protection (Optional)</h3><p><strong>1. Protect Main Branch</strong></p><p>On GitLab:</p><ol><li>Go to <strong>Settings</strong> → <strong>Repository</strong> → <strong>Protected branches</strong></li><li>Add <code>main</code> branch:<ul><li>Allowed to merge: Maintainers</li><li>Allowed to push: No one</li><li>Require approval: Yes</li></ul></li></ol><p><strong>2. Protect Dev Branch</strong></p><p>Add <code>dev</code> branch with similar settings but allow developers to push.</p><hr><h3 id=git-workflow-summary>Git Workflow Summary</h3><pre tabindex=0><code>1. Create feature branch from dev
+   git checkout dev
+   git pull origin dev
+   git checkout -b feature/new-feature
+
+2. Make changes and commit
+   git add .
+   git commit -m &#34;feat: Add new feature&#34;
+
+3. Push to GitLab
+   git push -u origin feature/new-feature
+
+4. Create Merge Request on GitLab
+   feature/new-feature → dev
+
+5. Review and merge
+
+6. Deploy to dev environment
+   cd OJT_lambda
+   npm run build
+   npm run deploy
+
+7. Test in dev environment
+
+8. Merge dev → main for production
+</code></pre><hr><h3 id=commit-message-convention>Commit Message Convention</h3><p>Follow conventional commits:</p><pre tabindex=0><code>feat: Add user authentication
+fix: Fix login validation bug
+docs: Update API documentation
+style: Format code with prettier
+refactor: Refactor database queries
+test: Add unit tests for auth
+chore: Update dependencies
+perf: Optimize product search query
+</code></pre><p><strong>Examples:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;feat: Add cart functionality&#34;</span>
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;fix: Fix order total calculation&#34;</span>
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;docs: Update README with deployment steps&#34;</span>
+</span></span></code></pre></div><hr><h3 id=branch-naming-convention>Branch Naming Convention</h3><pre tabindex=0><code>feature/add-cart-api
+feature/user-authentication
+bugfix/fix-login-error
+bugfix/cart-quantity-issue
+hotfix/critical-security-patch
+release/v1.0.0
+</code></pre><hr><h3 id=troubleshooting>Troubleshooting</h3><h4 id=issue-authentication-failed>Issue: Authentication Failed</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Use Personal Access Token instead of password</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># When prompted for password, enter your token</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Or configure credential helper</span>
+</span></span><span style=display:flex><span>git config --global credential.helper store
+</span></span></code></pre></div><h4 id=issue-large-files-rejected>Issue: Large Files Rejected</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Check file sizes</span>
+</span></span><span style=display:flex><span>git ls-files -z | ForEach-Object { 
+</span></span><span style=display:flex><span>  $size = (Get-Item $_).Length / <span style=color:#ae81ff>1</span>MB
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> ($size <span style=color:#f92672>-gt</span> <span style=color:#ae81ff>1</span>) { Write-Host <span style=color:#e6db74>&#34;</span>$_<span style=color:#e6db74> : </span>$size<span style=color:#e6db74> MB&#34;</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Add large files to .gitignore</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;*.zip&#34;</span> &gt;&gt; .gitignore
+</span></span><span style=display:flex><span>git rm --cached *.zip
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Remove large files&#34;</span>
+</span></span></code></pre></div><h4 id=issue-push-rejected-non-fast-forward>Issue: Push Rejected (Non-Fast-Forward)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Pull latest changes first</span>
+</span></span><span style=display:flex><span>git pull origin main --rebase
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Then push</span>
+</span></span><span style=display:flex><span>git push origin main
+</span></span></code></pre></div><h4 id=issue-merge-conflicts>Issue: Merge Conflicts</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Update your branch</span>
+</span></span><span style=display:flex><span>git checkout feature/your-feature
+</span></span><span style=display:flex><span>git fetch origin
+</span></span><span style=display:flex><span>git merge origin/dev
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Resolve conflicts in files</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Then commit</span>
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Resolve merge conflicts&#34;</span>
+</span></span><span style=display:flex><span>git push
+</span></span></code></pre></div><hr><h3 id=repository-checklist>Repository Checklist</h3><ul><li><input disabled type=checkbox> Git initialized in project root</li><li><input disabled type=checkbox> .gitignore created with proper exclusions</li><li><input disabled type=checkbox> Initial commit created</li><li><input disabled type=checkbox> GitLab repository created</li><li><input disabled type=checkbox> Remote origin added</li><li><input disabled type=checkbox> Code pushed to GitLab</li><li><input disabled type=checkbox> Personal Access Token created (if needed)</li><li><input disabled type=checkbox> Files verified on GitLab</li><li><input disabled type=checkbox> Dev branch created</li><li><input disabled type=checkbox> Branch protection configured (optional)</li></ul><hr><h3 id=next-steps>Next Steps</h3><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.07-test-endpoints/ title="Test Endpoints End-to-End"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.09-cleanup/ title=Cleanup style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/clipboard.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/perfect-scrollbar.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/perfect-scrollbar.jquery.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/jquery.sticky.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/featherlight.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/highlight.pack.js?1765312725></script><script>hljs.initHighlightingOnLoad()</script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/modernizr.custom-3.6.0.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/learn.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/hugo-learn.js?1765312725></script><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/mermaid/mermaid.css?1765312725 rel=stylesheet><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/mermaid/mermaid.js?1765312725></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>

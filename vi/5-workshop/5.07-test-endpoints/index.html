@@ -1,0 +1,388 @@
+<!doctype html><html lang=vi class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="ducdmse182938@fpt.edu.vn"><link rel=icon href=https://mrgoat-hellking.github.io/fcj-workshop-template/images/favicon.png type=image/png><title>Kiểm Tra Endpoints Toàn Diện :: Báo cáo thực tập</title>
+<link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/nucleus.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/fontawesome-all.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/hybrid.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/featherlight.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/perfect-scrollbar.min.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/auto-complete.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/atom-one-dark-reasonable.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/theme.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/hugo-theme.css?1765312725 rel=stylesheet><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/css/theme-workshop.css?1765312725 rel=stylesheet><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/jquery-3.3.1.min.js?1765312725></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.07-test-endpoints/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://mrgoat-hellking.github.io/fcj-workshop-template/><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/lunr.min.js?1765312725></script><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/auto-complete.js?1765312725></script><script type=text/javascript>var baseurl="https://mrgoat-hellking.github.io/fcj-workshop-template//vi"</script><script type=text/javascript src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/search.js?1765312725></script></div><div class=highlightable><ul class=topics><li data-nav-id=/vi/1-worklog/ title="Nhật ký công việc" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/><b>1. </b>Nhật ký công việc
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/1-worklog/1.1-week1/ title="Worklog Tuần 1" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.1-week1/><b>1.1. </b>Worklog Tuần 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.2-week2/ title="Worklog Tuần 2" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.2-week2/><b>1.2. </b>Worklog Tuần 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.3-week3/ title="Worklog Tuần 3" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.3-week3/><b>1.3. </b>Worklog Tuần 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.4-week4/ title="Worklog Tuần 4" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.4-week4/><b>1.4. </b>Worklog Tuần 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.5-week5/ title="Worklog Tuần 5" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.5-week5/><b>1.5. </b>Worklog Tuần 5
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.6-week6/ title="Worklog Tuần 6" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.6-week6/><b>1.6. </b>Worklog Tuần 6
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.7-week7/ title="Worklog Tuần 7" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.7-week7/><b>1.7. </b>Worklog Tuần 7
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.8-week8/ title="Worklog Tuần 8" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.8-week8/><b>1.8. </b>Worklog Tuần 8
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.9-week9/ title="Worklog Tuần 9" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.9-week9/><b>1.9. </b>Worklog Tuần 9
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.10-week10/ title="Worklog Tuần 10" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.10-week10/><b>1.10. </b>Worklog Tuần 10
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.11-week11/ title="Worklog Tuần 11" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.11-week11/><b>1.11. </b>Worklog Tuần 11
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.12-week12/ title="Worklog Tuần 12" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/1-worklog/1.12-week12/><b>1.12 </b>Worklog Tuần 12
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/2-proposal/ title="Bản đề xuất" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/2-proposal/><b>2. </b>Bản đề xuất
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/ title="Các bài blogs đã dịch" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/3-blogstranslated/><b>3. </b>Các bài blogs đã dịch
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/3.2-blog2/ title="Blog 2" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/3.3-blog3/ title="Blog 3" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/3-blogstranslated/3.3-blog3/><b>3.3. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/4-eventparticipated/ title="Các events đã tham gia" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/><b>4. </b>Các events đã tham gia
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.3-event3/ title="Event 3" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/4.3-event3/><b>4.3. </b>Event 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.4-event4/ title="Event 4" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/4.4-event4/><b>4.4. </b>Event 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.5-event5/ title="Event 5" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/4-eventparticipated/4.5-event5/><b>4.5. </b>Event 5
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/5-workshop/ title=Workshop class="dd-item
+parent"><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/5-workshop/5.01-workshop-overview/ title="Tổng quan Workshop" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.01-workshop-overview/><b>5.01. </b>Tổng quan Workshop
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.02-setup-environment/ title="Thiết lập Môi trường" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.02-setup-environment/><b>5.02. </b>Thiết lập Môi trường
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.03-cdk-bootstrap/ title="CDK Bootstrap" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.03-cdk-bootstrap/><b>5.03. </b>CDK Bootstrap
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.04-configure-stacks/ title="Cấu hình các Infrastructure Stack" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.04-configure-stacks/><b>5.04. </b>Cấu hình các Infrastructure Stack
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.05-configure-api-lambda/ title="Cấu hình API & Lambda" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.05-configure-api-lambda/><b>5.05. </b>Cấu hình API & Lambda
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.06-deploy-backend/ title="Triển khai Backend Services" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.06-deploy-backend/><b>5.06. </b>Triển khai Backend Services
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.07-test-endpoints/ title="Kiểm Tra Endpoints Toàn Diện" class="dd-item
+active"><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.07-test-endpoints/><b>5.07. </b>Kiểm Tra Endpoints Toàn Diện
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.08-push-gitlab/ title="Push lên GitLab" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.08-push-gitlab/><b>5.08. </b>Push lên GitLab
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.09-cleanup/ title="Dọn dẹp tài nguyên" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.09-cleanup/><b>5.09. </b>Dọn dẹp tài nguyên
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/6-self-evaluation/ title="Tự đánh giá" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/6-self-evaluation/><b>6. </b>Tự đánh giá
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/7-feedback/ title="Chia sẻ, đóng góp ý kiến" class=dd-item><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/7-feedback/><b>7. </b>Chia sẻ, đóng góp ý kiến
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://mrgoat-hellking.github.io/fcj-workshop-template/en/5-workshop/5.07-test-endpoints/>English</option><option id=vi value=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.07-test-endpoints/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/>Báo cáo thực tập</a> > <a href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/>Workshop</a> > Kiểm Tra Endpoints Toàn Diện</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li></li><li><a href=#bước-1-nhận-api-điểm-cuối>Bước 1: Nhận API Điểm cuối</a></li><li><a href=#bước-2-kiểm-tra-api-xác-thực>Bước 2: Kiểm tra API Xác thực</a></li><li><a href=#bước-3-api-sản-phẩm-thử-nghiệm>Bước 3: API sản phẩm thử nghiệm</a></li><li><a href=#bước-4-kiểm-tra-api-giỏ-hàng>Bước 4: Kiểm tra API Giỏ hàng</a></li><li><a href=#bước-5-kiểm-tra-api-đơn-hàng>Bước 5: Kiểm tra API Đơn hàng</a></li><li><a href=#bước-6-kiểm-tra-api-danh-mục>Bước 6: Kiểm tra API Danh mục</a></li><li><a href=#bước-7-kiểm-tra-api-brands>Bước 7: Kiểm tra API Brands</a></li><li><a href=#bước-8-kiểm-tra-api-banners>Bước 8: Kiểm tra API Banners</a></li><li><a href=#bước-9-kiểm-tra-api-xếp-hạng>Bước 9: Kiểm tra API Xếp hạng</a></li><li><a href=#bước-10-kiểm-tra-api-người-dùng-quản-trị-viên>Bước 10: Kiểm tra API người dùng (Quản trị viên)</a></li><li><a href=#bước-11-kiểm-tra-api-tải-lên-hình-ảnh>Bước 11: Kiểm tra API Tải lên Hình ảnh</a></li><li><a href=#danh-sách-kiểm-tra-thử-nghiệm>Danh sách kiểm tra thử nghiệm</a></li><li><a href=#điểm-chuẩn-hiệu-suất>Điểm chuẩn Hiệu suất</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Kiểm Tra Endpoints Toàn Diện</h1><h4 id=tổng-quan>Tổng quan</h4><p>Sau khi triển khai chương trình phụ trợ thành công, bạn cần kiểm tra tất cả các điểm cuối API để đảm bảo hệ thống hoạt động chính xác. Hội thảo này hướng dẫn chi tiết cách thử nghiệm từng module của hệ thống Thương mại điện tử OJT.</p><h4 id=kiến-trúc-api>Kiến trúc API</h4><pre tabindex=0><code>Cổng API (API REST)
+↓
+┌─ ...�
+│ 11 Mô-đun Lambda (63 API) │
+├─────────────────────────────────────────────────────────────────────┤
+│ Auth │Sản phẩm │ Giỏ hàng │ Đơn hàng │Danh mục │ Thương hiệu │
+│(4 API) │(12 API) │(6 API) │(9 API) │ (6 API) │ (5 API) │
+├───────────┼───────────────────────────────────────────────────────┤
+│ Biểu ngữ │ Xếp hạng │ Người dùng │ Hình ảnh │ Sản phẩm │ │
+│(7 API) │(3 API) │(3 API) │(1 API) │ Chi tiết │ │
+│ │ │ │ │(7 API) │ │
+└─ ...
+↓
+RDS SQL Server (thông qua Secrets Manager)
+</code></pre><hr><h3 id=bước-1-nhận-api-điểm-cuối>Bước 1: Nhận API Điểm cuối</h3><p><strong>1. Lấy URL API từ Đầu ra CloudFormation</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Lấy điểm cuối API từ API Stack</span>
+</span></span><span style=display:flex><span>$API_URL = aws cloudformation describe-stacks `
+</span></span><span style=display:flex><span>--stack-name OJT-ApiStack `
+</span></span><span style=display:flex><span>--query <span style=color:#e6db74>&#39;Stacks[0].Outputs[?OutputKey==`ApiUrl`].OutputValue&#39;</span> `
+</span></span><span style=display:flex><span>--output text
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Điểm cuối API: </span>$API_URL<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Đầu ra: https://xxxxxxxxxx.execute-api.ap-southeast-1.amazonaws.com/prod</span>
+</span></span></code></pre></div><p><strong>2. Thiết lập Biến Môi trường</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Thiết lập điểm cuối API cho phiên PowerShell</span>
+</span></span><span style=display:flex><span>$API_URL = <span style=color:#e6db74>&#34;https://xxxxxxxxxx.execute-api.ap-southeast-1.amazonaws.com/prod&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Điểm cuối API đã được cấu hình: </span>$API_URL<span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><hr><h3 id=bước-2-kiểm-tra-api-xác-thực>Bước 2: Kiểm tra API Xác thực</h3><h4 id=21-đăng-ký-người-dùng-kiểm-tra>2.1 Đăng ký Người dùng Kiểm tra</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /auth/signup</span>
+</span></span><span style=display:flex><span>$signupBody = @{
+</span></span><span style=display:flex><span>email = <span style=color:#e6db74>&#34;testuser@example.com&#34;</span>
+</span></span><span style=display:flex><span>password = <span style=color:#e6db74>&#34;Test123!&#34;</span>
+</span></span><span style=display:flex><span>fullName = <span style=color:#e6db74>&#34;Người dùng Kiểm tra&#34;</span>
+</span></span><span style=display:flex><span>phone = <span style=color:#e6db74>&#34;+84901234567&#34;</span>
+</span></span><span style=display:flex><span>} | Chuyển đổi sang JSON
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$response = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/auth/signup&#34;</span> `
+</span></span><span style=display:flex><span>-Method Post `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $signupBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$response | Chuyển đổi sang JSON
+</span></span></code></pre></div><h4 id=22-kiểm-tra-đăng-nhập-người-dùng>2.2 Kiểm tra đăng nhập người dùng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /auth/login</span>
+</span></span><span style=display:flex><span>$loginBody = @{
+</span></span><span style=display:flex><span>email = <span style=color:#e6db74>&#34;testuser@example.com&#34;</span>
+</span></span><span style=display:flex><span>password = <span style=color:#e6db74>&#34;Test123!&#34;</span>
+</span></span><span style=display:flex><span>} | ConvertTo-Json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$loginResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/auth/login&#34;</span> `
+</span></span><span style=display:flex><span>-Method Post `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $loginBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Lưu mã thông báo JWT cho các yêu cầu đã xác thực</span>
+</span></span><span style=display:flex><span>$TOKEN = $loginResponse.token
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Mã thông báo JWT: </span>$TOKEN<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$loginResponse | ConvertTo-Json
+</span></span><span style=display:flex><span><span style=color:#75715e># Dự kiến: { &#34;token&#34;: &#34;eyJhbG...&#34;, &#34;user&#34;: { &#34;userId&#34;: 1, &#34;email&#34;: &#34;...&#34;, &#34;role&#34;: &#34;Customer&#34; } }</span>
+</span></span></code></pre></div><h4 id=23-kiểm-tra-lấy-người-dùng-hiện-tại>2.3 Kiểm tra Lấy Người dùng Hiện tại</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /auth/me (yêu cầu xác thực)</span>
+</span></span><span style=display:flex><span>$headers = @{
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Authorization&#34;</span> = <span style=color:#e6db74>&#34;Bearer </span>$TOKEN<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$meResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/auth/me&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get `
+</span></span><span style=display:flex><span>-Headers $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$meResponse | ConvertTo-Json
+</span></span><span style=display:flex><span><span style=color:#75715e># Dự kiến: { &#34;user&#34;: { &#34;userId&#34;: 1, &#34;email&#34;: &#34;testuser@example.com&#34;, &#34;fullName&#34;: &#34;Người dùng thử nghiệm&#34; } }</span>
+</span></span></code></pre></div><hr><h3 id=bước-3-api-sản-phẩm-thử-nghiệm>Bước 3: API sản phẩm thử nghiệm</h3><h4 id=31-lấy-tất-cả-sản-phẩm>3.1 Lấy tất cả sản phẩm</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products</span>
+</span></span><span style=display:flex><span>$products = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products?page=1&amp;limit=10&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Đã tìm thấy </span>$($products.total)<span style=color:#e6db74> sản phẩm&#34;</span>
+</span></span><span style=display:flex><span>$products | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=32-lấy-chi-tiết-sản-phẩm>3.2 Lấy Chi tiết Sản phẩm</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/detail/{id}</span>
+</span></span><span style=display:flex><span>$productId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$product = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/detail/</span>$productId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$product | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=33-tìm-kiếm-sản-phẩm>3.3 Tìm kiếm Sản phẩm</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/search?q=keyword</span>
+</span></span><span style=display:flex><span>$searchResults = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/search?q=phone&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$searchResults | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=34-lấy-sản-phẩm-bán-chạy-nhất>3.4 Lấy sản phẩm bán chạy nhất</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/best-selling</span>
+</span></span><span style=display:flex><span>$bestSelling = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/best-selling?limit=10&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$bestSelling | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=35-lấy-sản-phẩm-mới-nhất>3.5 Lấy sản phẩm mới nhất</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/newest</span>
+</span></span><span style=display:flex><span>$newest = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/newest?limit=10&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$newest | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=36-lấy-sản-phẩm-theo-danh-mục>3.6 Lấy sản phẩm theo danh mục</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/category/{id}</span>
+</span></span><span style=display:flex><span>$categoryId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$categoryProducts = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/category/</span>$categoryId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$categoryProducts | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=37-lấy-sản-phẩm-theo-thương-hiệu>3.7 Lấy sản phẩm theo thương hiệu</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /products/brand/{id}</span>
+</span></span><span style=display:flex><span>$brandId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$brandProducts = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/products/brand/</span>$brandId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$brandProducts | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><hr><h3 id=bước-4-kiểm-tra-api-giỏ-hàng>Bước 4: Kiểm tra API Giỏ hàng</h3><h4 id=41-thêm-vào-giỏ-hàng>4.1 Thêm vào Giỏ hàng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /cart (yêu cầu xác thực)</span>
+</span></span><span style=display:flex><span>$cartBody = @{
+</span></span><span style=display:flex><span>productDetailId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>quantity = <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>} | ConvertTo-Json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$cartResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/cart&#34;</span> `
+</span></span><span style=display:flex><span>-Method Post `
+</span></span><span style=display:flex><span>-Headers $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $cartBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$cartResponse | ConvertTo-Json
+</span></span></code></pre></div><h4 id=42-lấy-giỏ-hàng-của-tôi>4.2 Lấy Giỏ hàng của tôi</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /cart/me</span>
+</span></span><span style=display:flex><span>$myCart = Invoke-RestMethod`
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/cart/me&#34;</span> `
+</span></span><span style=display:flex><span>-Phương thức Lấy `
+</span></span><span style=display:flex><span>-Tiêu đề $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$myCart | Chuyển đổi sang JSON -Độ sâu <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=43-cập-nhật-mặt-hàng-trong-giỏ-hàng>4.3 Cập nhật mặt hàng trong giỏ hàng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># PUT /cart/{id}</span>
+</span></span><span style=display:flex><span>$cartItemId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$updateBody = @{
+</span></span><span style=display:flex><span>quantity = <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>} | Chuyển đổi sang JSON
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$updateResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/cart/</span>$cartItemId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Phương thức Đặt `
+</span></span><span style=display:flex><span>-Tiêu đề $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $updateBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$updateResponse | ConvertTo-Json
+</span></span></code></pre></div><h4 id=44-lấy-số-lượng-giỏ-hàng>4.4 Lấy Số lượng Giỏ hàng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /cart/count</span>
+</span></span><span style=display:flex><span>$cartCount = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/cart/count&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get `
+</span></span><span style=display:flex><span>-Headers $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Số lượng hàng trong giỏ hàng: </span>$($cartCount.count)<span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><h4 id=45-xóa-hàng-trong-giỏ-hàng>4.5 Xóa Hàng trong Giỏ hàng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># DELETE /cart/{id}</span>
+</span></span><span style=display:flex><span>Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/cart/</span>$cartItemId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Delete `
+</span></span><span style=display:flex><span>-Headers $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Số lượng hàng trong giỏ hàng đã bị xóa&#34;</span>
+</span></span></code></pre></div><hr><h3 id=bước-5-kiểm-tra-api-đơn-hàng>Bước 5: Kiểm tra API Đơn hàng</h3><h4 id=51-tạo-đơn-hàng-cod>5.1 Tạo Đơn hàng (COD)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /orders/create-cod</span>
+</span></span><span style=display:flex><span>$orderBody = @{
+</span></span><span style=display:flex><span>shippingAddress = <span style=color:#e6db74>&#34;123 Đường Test, Quận 1, Thành phố Hồ Chí Minh&#34;</span>
+</span></span><span style=display:flex><span>phone = <span style=color:#e6db74>&#34;+84901234567&#34;</span>
+</span></span><span style=display:flex><span>note = <span style=color:#e6db74>&#34;Vui lòng gọi trước khi giao hàng&#34;</span>
+</span></span><span style=display:flex><span>} | ConvertTo-Json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$orderResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/orders/create-cod&#34;</span> `
+</span></span><span style=display:flex><span>-Method Post `
+</span></span><span style=display:flex><span>-Headers $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $orderBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ORDER_ID = $orderResponse.orderId
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Đơn hàng đã tạo: </span>$ORDER_ID<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>$orderResponse | Chuyển đổi sang JSON
+</span></span></code></pre></div><h4 id=52-lấy-thông-tin-chi-tiết-đơn-hàng>5.2 Lấy thông tin chi tiết đơn hàng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /orders/{id}/details</span>
+</span></span><span style=display:flex><span>$orderDetails = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/orders/</span>$ORDER_ID<span style=color:#e6db74>/details&#34;</span> `
+</span></span><span style=display:flex><span>-Phương thức Lấy `
+</span></span><span style=display:flex><span>-Tiêu đề $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$orderDetails | Chuyển đổi sang JSON -Độ sâu <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=53-lấy-thông-tin-đơn-hàng-của-người-dùng>5.3 Lấy thông tin đơn hàng của người dùng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /orders/user/{userId}</span>
+</span></span><span style=display:flex><span>$userId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$userOrders = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/orders/user/</span>$userId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Phương thức Lấy `
+</span></span><span style=display:flex><span>-Tiêu đề $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$userOrders | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=54-cập-nhật-trạng-thái-đơn-hàng-quản-trị-viên>5.4 Cập nhật Trạng thái Đơn hàng (Quản trị viên)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># PATCH /orders/{id}/status</span>
+</span></span><span style=display:flex><span>$statusBody = @{
+</span></span><span style=display:flex><span>status = <span style=color:#e6db74>&#34;Đang xử lý&#34;</span>
+</span></span><span style=display:flex><span>} | ConvertTo-Json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$statusResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/orders/</span>$ORDER_ID<span style=color:#e6db74>/status&#34;</span> `
+</span></span><span style=display:flex><span>-Method Patch `
+</span></span><span style=display:flex><span>-Headers $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $statusBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$statusResponse | ConvertTo-Json
+</span></span></code></pre></div><hr><h3 id=bước-6-kiểm-tra-api-danh-mục>Bước 6: Kiểm tra API Danh mục</h3><h4 id=61-lấy-tất-cả-danh-mục>6.1 Lấy tất cả Danh mục</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /categories</span>
+</span></span><span style=display:flex><span>$categories = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/categories&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$categories | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=62-lấy-danh-mục-theo-id>6.2 Lấy Danh mục theo ID</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /categories/{id}</span>
+</span></span><span style=display:flex><span>$categoryId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$category = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/categories/</span>$categoryId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$category | ConvertTo-Json
+</span></span></code></pre></div><h4 id=63-tìm-kiếm-danh-mục>6.3 Tìm kiếm Danh mục</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /categories/search?q=keyword</span>
+</span></span><span style=display:flex><span>$categorySearch = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/categories/search?q=phone&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$categorySearch | ConvertTo-Json
+</span></span></code></pre></div><hr><h3 id=bước-7-kiểm-tra-api-brands>Bước 7: Kiểm tra API Brands</h3><h4 id=71-lấy-tất-cả-các-brands>7.1 Lấy tất cả các Brands</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /brands</span>
+</span></span><span style=display:flex><span>$brands = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/brands&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$brands | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=72-lấy-thương-hiệu-theo-id>7.2 Lấy thương hiệu theo ID</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /brands/{id}</span>
+</span></span><span style=display:flex><span>$brandId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$brand = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/brands/</span>$brandId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$brand | ConvertTo-Json
+</span></span></code></pre></div><hr><h3 id=bước-8-kiểm-tra-api-banners>Bước 8: Kiểm tra API Banners</h3><h4 id=81-lấy-tất-cả-banners>8.1 Lấy tất cả Banners</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /banners</span>
+</span></span><span style=display:flex><span>$banners = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/banners&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$banners | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=82-lấy-banner-đang-hoạt-động>8.2 Lấy Banner Đang Hoạt Động</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /banners?active=true</span>
+</span></span><span style=display:flex><span>$activeBanners = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/banners?active=true&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$activeBanners | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><hr><h3 id=bước-9-kiểm-tra-api-xếp-hạng>Bước 9: Kiểm tra API Xếp hạng</h3><h4 id=91-lấy-xếp-hạng-sản-phẩm>9.1 Lấy Xếp hạng Sản phẩm</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /ratings/product/{id}</span>
+</span></span><span style=display:flex><span>$productId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$ratings = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/ratings/product/</span>$productId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ratings | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=92-lấy-thống-kê-xếp-hạng>9.2 Lấy Thống kê Xếp hạng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /ratings/product/{id}/stats</span>
+</span></span><span style=display:flex><span>$ratingStats = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/ratings/product/</span>$productId<span style=color:#e6db74>/stats&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ratingStats | ConvertTo-Json
+</span></span><span style=display:flex><span><span style=color:#75715e># Dự kiến: { &#34;averageRating&#34;: 4.5, &#34;totalRatings&#34;: 10, &#34;distribution&#34;: { &#34;5&#34;: 5, &#34;4&#34;: 3, &#34;3&#34;: 2 } }</span>
+</span></span></code></pre></div><h4 id=93-tạo-xếp-hạng>9.3 Tạo Xếp hạng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /ratings</span>
+</span></span><span style=display:flex><span>$ratingBody = @{
+</span></span><span style=display:flex><span>productId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>rating = <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>comment = <span style=color:#e6db74>&#34;Sản phẩm tuyệt vời! Rất đáng dùng.&#34;</span>
+</span></span><span style=display:flex><span>} | ConvertTo-Json
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ratingResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/ratings&#34;</span> `
+</span></span><span style=display:flex><span>-Method Post `
+</span></span><span style=display:flex><span>-Headers $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $ratingBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ratingResponse | ConvertTo-Json
+</span></span></code></pre></div><hr><h3 id=bước-10-kiểm-tra-api-người-dùng-quản-trị-viên>Bước 10: Kiểm tra API người dùng (Quản trị viên)</h3><h4 id=101-lấy-tất-cả-người-dùng>10.1 Lấy tất cả người dùng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /users (Chỉ dành cho Quản trị viên)</span>
+</span></span><span style=display:flex><span>$users = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/users&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get `
+</span></span><span style=display:flex><span>-Headers $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$users | ConvertTo-Json -Depth <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><h4 id=102-lấy-người-dùng-theo-id>10.2 Lấy người dùng theo ID</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># GET /users/{id}</span>
+</span></span><span style=display:flex><span>$userId = <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>$user = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/users/</span>$userId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Get `
+</span></span><span style=display:flex><span>-Headers $headers
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$người dùng | Chuyển đổi sang JSON
+</span></span></code></pre></div><h4 id=103-cập-nhật-hồ-sơ-người-dùng>10.3 Cập nhật Hồ sơ Người dùng</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># PUT /users/profile/{id}</span>
+</span></span><span style=display:flex><span>$profileBody = @{
+</span></span><span style=display:flex><span>fullName = <span style=color:#e6db74>&#34;Tên đã cập nhật&#34;</span>
+</span></span><span style=display:flex><span>phone = <span style=color:#e6db74>&#34;+84909876543&#34;</span>
+</span></span><span style=display:flex><span>address = <span style=color:#e6db74>&#34;456 New Street, District 2&#34;</span>
+</span></span><span style=display:flex><span>} | Chuyển đổi sang JSON
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$profileResponse = Invoke-RestMethod `
+</span></span><span style=display:flex><span>-Uri <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/users/profile/</span>$userId<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>-Method Put `
+</span></span><span style=display:flex><span>-Headers $headers `
+</span></span><span style=display:flex><span>-ContentType <span style=color:#e6db74>&#34;application/json&#34;</span> `
+</span></span><span style=display:flex><span>-Body $profileBody
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$profileResponse | ConvertTo-Json
+</span></span></code></pre></div><hr><h3 id=bước-11-kiểm-tra-api-tải-lên-hình-ảnh>Bước 11: Kiểm tra API Tải lên Hình ảnh</h3><h4 id=111-tải-lên-hình-ảnh>11.1 Tải lên Hình ảnh</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># POST /images/upload</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Lưu ý: Thao tác này yêu cầu multipart/form-data</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Sử dụng curl để tải lên tệp</span>
+</span></span><span style=display:flex><span>curl -X POST <span style=color:#e6db74>&#34;</span>$API_URL<span style=color:#e6db74>/images/upload&#34;</span> `
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-H <span style=color:#e6db74>&#34;Authorization: Bearer </span>$TOKEN<span style=color:#e6db74>&#34;</span> `
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-F</span> <span style=color:#e6db74>&#34;file=@D:\test-image.jpg&#34;</span> `
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-F</span> <span style=color:#e6db74>&#34;type=product&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>---
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>### Bước 12: Xác minh Nhật ký CloudWatch</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#### 12.1 Kiểm tra Nhật ký Lambda</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>```powershell
+</span></span><span style=display:flex><span><span style=color:#75715e># Nhật ký Mô-đun Tail Auth</span>
+</span></span><span style=display:flex><span>aws logs tail /aws/lambda/OJT-Ecommerce-AuthModule --follow
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Nhật ký Mô-đun Tail Products</span>
+</span></span><span style=display:flex><span>aws logs tail /aws/lambda/OJT-Ecommerce-ProductsModule --follow
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Xem 10 phút gần nhất</span>
+</span></span><span style=display:flex><span>aws logs tail /aws/lambda/OJT-Ecommerce-AuthModule --since <span style=color:#ae81ff>10m</span>
+</span></span></code></pre></div><h3 id=danh-sách-kiểm-tra-thử-nghiệm>Danh sách kiểm tra thử nghiệm</h3><h4 id=api-xác-thực-4-điểm-cuối>API xác thực (4 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>POST /auth/signup</code> - Đăng ký người dùng</li><li><input disabled type=checkbox> <code>POST /auth/login</code> - Đăng nhập người dùng, nhận mã thông báo JWT</li><li><input disabled type=checkbox> <code>POST /auth/logout</code> - Đăng xuất người dùng</li><li><input disabled type=checkbox> <code>GET /auth/me</code> - Nhận người dùng hiện tại</li></ul><h4 id=api-sản-phẩm-12-điểm-cuối>API sản phẩm (12 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /products</code> - Liệt kê tất cả sản phẩm</li><li><input disabled type=checkbox> <code>GET /products/detail/{id}</code> - Nhận chi tiết sản phẩm</li><li><input disabled type=checkbox> <code>GET /products/search</code> - Tìm kiếm sản phẩm</li><li><input disabled type=checkbox> <code>GET /products/best-selling</code> - Sản phẩm bán chạy nhất</li><li><input disabled type=checkbox> <code>GET /products/newest</code> - Sản phẩm mới nhất</li><li><input disabled type=checkbox> <code>GET /products/category/{id}</code> - Sản phẩm theo danh mục</li><li><input disabled type=checkbox> <code>GET /products/brand/{id}</code> - Sản phẩm theo thương hiệu</li><li><input disabled type=checkbox> <code>GET /products/price-range</code> - Sản phẩm theo khoảng giá</li><li><input disabled type=checkbox> <code>POST /products</code> - Tạo sản phẩm (Quản trị viên)</li><li><input disabled type=checkbox> <code>PUT /products/{id}</code> - Cập nhật sản phẩm (Quản trị viên)</li><li><input disabled type=checkbox> <code>DELETE /products/{id}</code> - Xóa sản phẩm (Quản trị viên)</li></ul><h4 id=api-giỏ-hàng-6-điểm-cuối>API Giỏ hàng (6 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>POST /cart</code> - Thêm vào giỏ hàng</li><li><input disabled type=checkbox> <code>GET /cart/me</code> - Lấy giỏ hàng của tôi</li><li><input disabled type=checkbox> <code>PUT /cart/{id}</code> - Cập nhật giỏ hàng mục</li><li><input disabled type=checkbox> <code>DELETE /cart/{id}</code> - Xóa mục trong giỏ hàng</li><li><input disabled type=checkbox> <code>DELETE /cart</code> - Xóa giỏ hàng</li><li><input disabled type=checkbox> <code>GET /cart/count</code> - Lấy số lượng giỏ hàng</li></ul><h4 id=api-đơn-hàng-9-điểm-cuối>API Đơn hàng (9 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>POST /orders</code> - Tạo đơn hàng</li><li><input disabled type=checkbox> <code>POST /orders/create-cod</code> - Tạo đơn hàng COD</li><li><input disabled type=checkbox> <code>GET /orders/{id}/details</code> - Lấy thông tin chi tiết đơn hàng</li><li><input disabled type=checkbox> <code>GET /orders/user/{userId}</code> - Lấy đơn hàng của người dùng</li><li><input disabled type=checkbox> <code>GET /orders</code> - Lấy tất cả đơn hàng (Quản trị viên)</li><li><input disabled type=checkbox> <code>PATCH /orders/{id}/status</code> - Cập nhật trạng thái đơn hàng</li><li><input disabled type=checkbox> <code>DELETE /orders/{id}</code> - Hủy đơn hàng</li></ul><h4 id=api-danh-mục-6-điểm-cuối>API Danh mục (6 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /categories</code> - Liệt kê tất cả các danh mục</li><li><input disabled type=checkbox> <code>GET /categories/{id}</code> - Lấy danh mục theo ID</li><li><input disabled type=checkbox> <code>GET /categories/search</code> - Tìm kiếm danh mục</li><li><input disabled type=checkbox> <code>POST /categories</code> - Tạo danh mục (Quản trị viên)</li><li><input disabled type=checkbox> <code>PUT /categories/{id}</code> - Cập nhật danh mục (Quản trị viên)</li><li><input disabled type=checkbox> <code>DELETE /categories/{id}</code> - Xóa danh mục (Quản trị viên)</li></ul><h4 id=api-thương-hiệu-5-điểm-cuối>API Thương hiệu (5 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /brands</code> - Liệt kê tất cả các thương hiệu</li><li><input disabled type=checkbox> <code>GET /brands/{id}</code> - Lấy thương hiệu theo ID</li><li><input disabled type=checkbox> <code>POST /brands</code> - Tạo thương hiệu (Quản trị viên)</li><li><input disabled type=checkbox> <code>PUT /brands/{id}</code> - Cập nhật thương hiệu (Quản trị viên)</li><li><input disabled type=checkbox> <code>DELETE /brands/{id}</code> - Xóa thương hiệu (Quản trị viên)</li></ul><h4 id=api-banners-7-điểm-cuối>API Banners (7 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /banners</code> - Liệt kê tất cả banners</li><li><input disabled type=checkbox> <code>GET /banners/{id}</code> - Lấy banners theo ID</li><li><input disabled type=checkbox> <code>GET /banners?active=true</code> - Lấy banners đang hoạt động</li><li><input disabled type=checkbox> <code>POST /banners</code> - Tạo banners (Quản trị viên)</li><li><input disabled type=checkbox> <code>PUT /banners/{id}</code> - Cập nhật banners (Quản trị viên)</li><li><input disabled type=checkbox> <code>DELETE /banners/{id}</code> - Xóa banners (Quản trị viên)</li><li><input disabled type=checkbox> <code>PATCH /banners/{id}/toggle</code> - Bật/tắt banners (Quản trị viên)</li></ul><h4 id=api-xếp-hạng-3-điểm-cuối>API Xếp hạng (3 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /ratings/product/{id}</code> - Lấy xếp hạng sản phẩm</li><li><input disabled type=checkbox> <code>GET /ratings/product/{id}/stats</code> - Lấy số liệu thống kê xếp hạng</li><li><input disabled type=checkbox> <code>POST /ratings</code> - Tạo xếp hạng</li></ul><h4 id=api-người-dùng-3-điểm-cuối>API Người dùng (3 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>GET /users</code> - Lấy tất cả người dùng (Quản trị viên)</li><li><input disabled type=checkbox> <code>GET /users/{id}</code> - Lấy người dùng theo ID</li><li><input disabled type=checkbox> <code>PUT /users/profile/{id}</code> - Cập nhật hồ sơ</li></ul><h4 id=api-hình-ảnh-1-điểm-cuối>API Hình ảnh (1 điểm cuối)</h4><ul><li><input disabled type=checkbox> <code>POST /images/upload</code> - Tải hình ảnh lên</li></ul><hr><h3 id=điểm-chuẩn-hiệu-suất>Điểm chuẩn Hiệu suất</h3><p><strong>Thời gian Phản hồi Dự kiến:</strong></p><table><thead><tr><th style=text-align:left>Điểm cuối</th><th style=text-align:left>Thời gian Dự kiến ​​</th><th style=text-align:left>Ghi chú</th></tr></thead><tbody><tr><td style=text-align:left><code>POST /auth/login</code></td><td style=text-align:left>&lt; 500ms</td><td style=text-align:left>Tạo JWT</td></tr><tr><td style=text-align:left><code>GET /products</code></td><td style=text-align:left>&lt; 300ms</td><td style=text-align:left>Truy vấn Cơ sở dữ liệu</td></tr><tr><td style=text-align:left><code>GET /products/detail/{id}</code></td><td style=text-align:left>&lt; 200ms</td><td style=text-align:left>Bản ghi đơn lẻ</td></tr><tr><td style=text-align:left><code>POST /cart</code></td><td style=text-align:left>&lt; 300ms</td><td style=text-align:left>Ghi cơ sở dữ liệu</td></tr><tr><td style=text-align:left><code>POST /orders/create-cod</code></td><td style=text-align:left>&lt; 500ms</td><td style=text-align:left>Giao dịch</td></tr><tr><td style=text-align:left><code>GET /categories</code></td><td style=text-align:left>&lt; 200ms</td><td style=text-align:left>Dữ liệu được lưu trong bộ nhớ đệm</td></tr><tr><td style=text-align:left><code>POST /images/upload</code></td><td style=text-align:left>&lt; 2 giây</td><td style=text-align:left>Tải lên S3</td></tr></tbody></table><hr><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.06-deploy-backend/ title="Triển khai Backend Services"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=https://mrgoat-hellking.github.io/fcj-workshop-template/vi/5-workshop/5.08-push-gitlab/ title="Push lên GitLab" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/clipboard.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/perfect-scrollbar.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/perfect-scrollbar.jquery.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/jquery.sticky.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/featherlight.min.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/highlight.pack.js?1765312725></script><script>hljs.initHighlightingOnLoad()</script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/modernizr.custom-3.6.0.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/learn.js?1765312725></script><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/js/hugo-learn.js?1765312725></script><link href=https://mrgoat-hellking.github.io/fcj-workshop-template/mermaid/mermaid.css?1765312725 rel=stylesheet><script src=https://mrgoat-hellking.github.io/fcj-workshop-template/mermaid/mermaid.js?1765312725></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
